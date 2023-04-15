@@ -2,9 +2,14 @@ import React, { useState } from "react";
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
+  const [showSubmenu, setShowSubmenu] = useState<boolean>(false);
 
   const onClickSidebarToggle = () => {
     setShowSidebar(!showSidebar);
+  }
+
+  const onClickSubmenu = () => {
+    setShowSubmenu(!showSubmenu);
   }
 
   return (
@@ -30,7 +35,7 @@ const Sidebar = () => {
               <li><a href="generic.html">Generic</a></li>
               <li><a href="elements.html">Elements</a></li>
               <li>
-                <span className="opener">Submenu</span>
+                <span className={`opener ${showSubmenu ? "active" : ""}`} onClick={onClickSubmenu}>Submenu</span>
                 <ul>
                   <li><a href="/">Lorem Dolor</a></li>
                   <li><a href="/">Ipsum Adipiscing</a></li>
@@ -62,15 +67,15 @@ const Sidebar = () => {
             </header>
             <div className="mini-posts">
               <article>
-                <a href="/" className="image"><img src="pic07" alt="" /></a>
+                <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/pic07.jpg`} alt="" /></a>
                 <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
               </article>
               <article>
-                <a href="/" className="image"><img src="images/pic08.jpg" alt="" /></a>
+                <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/pic08.jpg`} alt="" /></a>
                 <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
               </article>
               <article>
-                <a href="/" className="image"><img src="images/pic09.jpg" alt="" /></a>
+                <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/pic09.jpg`} alt="" /></a>
                 <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
               </article>
             </div>
