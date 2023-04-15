@@ -23,13 +23,19 @@ const Main = () => {
           <section id="banner">
             <div className="content">
               <header>
-                <h1>내가 할 수 있는 것에 집중하자</h1>
-                <p>박진완 (Berrycracker5)</p>
+                <h1>Focus On <br />What I Can Do</h1>
+                <p>Jinwan, Park (Berrycracker5)</p>
               </header>
-              <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-              <ul className="actions">
-                <li><a href="/" className="button big">Learn More</a></li>
-              </ul>
+              <p>
+                안녕하세요 주니어개발자 박진완입니다.<br />
+                보시고 계신 페이지는 오픈라이센스 HTML Template를 사용하였으며,<br />
+                Web App으로서 기능적인 부분은 스스로 구현해보았습니다.<br />
+                저의 성장을 기록하는 곳으로 사용되고 있습니다 :)<br />
+                방문 감사드립니다.
+              </p>
+              {/* <ul className="actions">
+                <li><a className="button big">Like</a></li>
+              </ul> */}
             </div>
             <span className="image object">
               <img src={process.env.PUBLIC_URL + "/images/pic10.jpg"} alt="" />
@@ -39,34 +45,34 @@ const Main = () => {
           {/* <!-- Section --> */}
           <section>
             <header className="major">
-              <h2>Erat lacinia</h2>
+              <h2>Strongs</h2>
             </header>
             <div className="features">
               <article>
                 <span className="icon fa-gem"></span>
                 <div className="content">
-                  <h3>Portitor ullamcorper</h3>
+                  <h3>Responsibility</h3>
                   <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                 </div>
               </article>
               <article>
                 <span className="icon solid fa-paper-plane"></span>
                 <div className="content">
-                  <h3>Sapien veroeros</h3>
+                  <h3>Continuous Development</h3>
                   <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                 </div>
               </article>
               <article>
                 <span className="icon solid fa-rocket"></span>
                 <div className="content">
-                  <h3>Quam lorem ipsum</h3>
+                  <h3>Communication</h3>
                   <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                 </div>
               </article>
               <article>
                 <span className="icon solid fa-signal"></span>
                 <div className="content">
-                  <h3>Sed magna finibus</h3>
+                  <h3>Experience</h3>
                   <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                 </div>
               </article>
@@ -76,7 +82,7 @@ const Main = () => {
           {/* <!-- Section --> */}
           <section>
             <header className="major">
-              <h2>Ipsum sed dolor</h2>
+              <h2>Projects</h2>
             </header>
             <div className="posts">
               <article>

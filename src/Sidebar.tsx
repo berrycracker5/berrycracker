@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState<boolean>(true);
+  const [showSidebar, setShowSidebar] = useState<boolean>(false);
   const [showSubmenu, setShowSubmenu] = useState<boolean>(false);
 
   const onClickSidebarToggle = () => {
@@ -87,20 +87,24 @@ const Sidebar = () => {
           {/* <!-- Section --> */}
           <section>
             <header className="major">
-              <h2>Get in touch</h2>
+              <h2>Contact</h2>
             </header>
-            <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+            {/* <p>1995.05.19 박진완</p> */}
             <ul className="contact">
-              <li className="icon solid fa-envelope"><a href="/">information@untitled.tld</a></li>
-              <li className="icon solid fa-phone">(000) 000-0000</li>
-              <li className="icon solid fa-home">1234 Somewhere Road #8254<br />
-                Nashville, TN 00000-0000</li>
+              <li className="icon solid"></li>
+              <li className="icon solid fa-envelope">wlsdhks5495@naver.com</li>
+              <li className="icon solid fa-phone">(010) 0000-5495</li>
+              {/* <li className="icon solid fa-home">1234 Somewhere Road #8254<br />
+                Nashville, TN 00000-0000</li> */}
             </ul>
           </section>
 
           {/* <!-- Footer --> */}
           <footer id="footer">
-            <p className="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            <p className="copyright">&copy; <a href="https://berrycracker5.github.io/berrycracker">Parkjinwan</a> All rights reserved. <br />
+              Demo Images From <a href="https://unsplash.com">UNSPLASH</a>. <br />
+              Designed By <a href="https://html5up.net">HTML5 UP</a>.<br />
+            </p>
           </footer>
 
         </div>
