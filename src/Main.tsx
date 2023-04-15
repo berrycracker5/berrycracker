@@ -9,13 +9,13 @@ const Main = () => {
 
           {/* <!-- Header --> */}
           <header id="header">
-            <a href="index.html" className="logo"><strong>MainPage</strong> by berrycracker</a>
+            <a className="logo"><strong>Designed</strong> by HTML5 UP</a>
             <ul className="icons">
-              <li><a href="/" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
-              <li><a href="/" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
-              <li><a href="/" className="icon brands fa-snapchat-ghost"><span className="label">Snapchat</span></a></li>
-              <li><a href="/" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
-              <li><a href="/" className="icon brands fa-medium-m"><span className="label">Medium</span></a></li>
+              <li><a className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
+              <li><a className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
+              <li><a className="icon brands fa-snapchat-ghost"><span className="label">Snapchat</span></a></li>
+              <li><a className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
+              <li><a className="icon brands fa-medium-m"><span className="label">Medium</span></a></li>
             </ul>
           </header>
 
@@ -23,8 +23,8 @@ const Main = () => {
           <section id="banner">
             <div className="content">
               <header>
-                <h1>Hi, I’m berrycracker</h1>
-                <p>추가설명 작성</p>
+                <h1>내가 할 수 있는 것에 집중하자</h1>
+                <p>박진완 (Berrycracker5)</p>
               </header>
               <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
               <ul className="actions">
