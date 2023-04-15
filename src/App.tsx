@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import Main from './Main';
 import MainWrapper from './MainWrapper';
 import Sidebar from './Sidebar';
 
