@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Main from './Main';
+import MainWrapper from './MainWrapper';
+import Sidebar from './Sidebar';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      Hi
+
+      {/* <!-- Wrapper --> */}
+      <div id="wrapper">
+        <MainWrapper />
+        <Sidebar />
+      </div>
     </div>
   );
 }
