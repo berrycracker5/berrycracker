@@ -3,11 +3,9 @@ import Sidebar from './pages/Sidebar';
 
 const App = () => {
   return (
-    <div className="App">
-      <div id="wrapper">
-        <MainWrapper />
-        <Sidebar />
-      </div>
+    <div className="App" id="wrapper">
+      <MainWrapper />
+      <Sidebar />
     </div>
   );
 }
