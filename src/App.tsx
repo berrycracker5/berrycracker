@@ -1,7 +1,7 @@
-import MainWrapper from './pages/components/MainWrapper';
-import Sidebar from './pages/Sidebar';
+import MainWrapper from "./pages/components/MainWrapper";
+import Sidebar from "./pages/Sidebar";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="App" id="wrapper">
       <MainWrapper />

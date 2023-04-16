@@ -18,7 +18,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".", // 경로 시작위치를 이 파일 위치로 설정
+    "paths": {
+      "@/*": [ // @/로 시작하는 경로는 src/ 경로로 설정됨
+        "src/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ]
+    }
   },
   "include": [
     "src"
