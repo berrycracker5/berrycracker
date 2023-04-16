@@ -27,11 +27,9 @@ const Main = () => {
                 <p>Jinwan, Park (Berrycracker5)</p>
               </header>
               <p>
-                안녕하세요 주니어개발자 박진완입니다.<br />
-                보시고 계신 페이지는 오픈라이센스 HTML Template를 사용하였으며,<br />
-                Web App으로서 기능적인 부분은 스스로 구현해보았습니다.<br />
-                저의 성장을 기록하는 곳으로 사용되고 있습니다 :)<br />
-                방문 감사드립니다.
+                안녕하세요 주니어 개발자 박진완입니다.<br />
+                여기는 저의 성장과 함께 발전할 페이지 입니다 :) <br />
+                감사합니다
               </p>
               {/* <ul className="actions">
                 <li><a className="button big">Like</a></li>
