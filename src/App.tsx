@@ -1,11 +1,9 @@
-import MainWrapper from './MainWrapper';
-import Sidebar from './Sidebar';
+import MainWrapper from './pages/components/MainWrapper';
+import Sidebar from './pages/Sidebar';
 
 const App = () => {
   return (
     <div className="App">
-
-      {/* <!-- Wrapper --> */}
       <div id="wrapper">
         <MainWrapper />
         <Sidebar />
