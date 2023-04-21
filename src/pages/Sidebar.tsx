@@ -1,4 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid  */
+/* eslint-disable jsx-a11y/anchor-has-content  */
 import React, { useState } from "react";
+import useMoveScroll from "../hooks/useMoveScroll";
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
@@ -34,10 +37,10 @@ const Sidebar = () => {
               <li>
                 <span className={`opener ${showSubmenu ? "active" : ""}`} onClick={onClickSubmenu}>ABOUT ME</span>
                 <ul>
-                  <li>Introduction</li>
-                  <li><a href="#!">Strongs</a></li>
-                  <li><a href="#!">Tech Stacks</a></li>
-                  <li><a href="#!">Projects</a></li>
+                  <li><a>Introduction</a></li>
+                  <li><a>Strongs</a></li>
+                  <li><a>Tech Stacks</a></li>
+                  <li><a>Projects</a></li>
                 </ul>
               </li>
               {/* <li><a href="index.html">Homepage</a></li>
@@ -47,7 +50,7 @@ const Sidebar = () => {
           </nav>
 
           {/* <!-- Section --> */}
-          {/* <section>
+          <section>
             <header className="major">
               <h2>Ante interdum</h2>
             </header>
@@ -68,7 +71,7 @@ const Sidebar = () => {
             <ul className="actions">
               <li><a href="/" className="button">More</a></li>
             </ul>
-          </section> */}
+          </section>
 
           {/* <!-- Section --> */}
           <section>

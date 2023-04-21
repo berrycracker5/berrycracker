@@ -1,6 +1,9 @@
+import useMoveScroll from "../hooks/useMoveScroll";
 import React from "react";
 
 const Main: React.FC = () => {
+  const { element: elementProject, onMoveToElement: onMoveToElementProject } = useMoveScroll();
+
   return (
     <>
       {/* <!-- Main --> */}
@@ -8,7 +11,7 @@ const Main: React.FC = () => {
         <div className="inner">
 
           {/* <!-- Header --> */}
-          <header id="header">
+          <header id="header" onClick={onMoveToElementProject}>
             <a href="#!" className="logo"><strong>Designed</strong> by HTML5 UP</a>
             <ul className="icons">
               <li><a href="#!" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
@@ -79,7 +82,7 @@ const Main: React.FC = () => {
 
           {/* <!-- Section --> */}
           <section>
-            <header className="major">
+            <header ref={elementProject} className="major">
               <h2>Projects</h2>
             </header>
             <div className="posts">
