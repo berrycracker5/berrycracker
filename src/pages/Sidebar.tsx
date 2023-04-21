@@ -20,6 +20,26 @@ const Sidebar = () => {
     setShowSubmenu(!showSubmenu);
   }
 
+  const handleClickIntroduction = () => {
+    onMoveToElementIntroduction();
+    // setShowSidebar(false);
+  }
+
+  const handleClickStrongs = () => {
+    onMoveToElementStrongs();
+    // setShowSidebar(false);
+  }
+
+  const handleClickTechStacks = () => {
+    onMoveToElementTechStacks();
+    // setShowSidebar(false);
+  }
+
+  const handleClickProjects = () => {
+    onMoveToElementProjects();
+    // setShowSidebar(false);
+  }
+
   return (
     <>
       {/* <!-- Sidebar --> */}
@@ -42,10 +62,10 @@ const Sidebar = () => {
               <li>
                 <span className={`opener ${showSubmenu ? "active" : ""}`} onClick={onClickSubmenu}>ABOUT ME</span>
                 <ul>
-                  <li><a onClick={onMoveToElementIntroduction}>Introduction</a></li>
-                  <li><a onClick={onMoveToElementStrongs}>Strongs</a></li>
-                  <li><a onClick={onMoveToElementTechStacks}>Tech Stacks</a></li>
-                  <li><a onClick={onMoveToElementProjects}>Projects</a></li>
+                  <li><a onClick={handleClickIntroduction}>Introduction</a></li>
+                  <li><a onClick={handleClickStrongs}>Strongs</a></li>
+                  <li><a onClick={handleClickTechStacks}>Tech Stacks</a></li>
+                  <li><a onClick={handleClickProjects}>Projects</a></li>
                 </ul>
               </li>
               {/* <li><a href="index.html">Homepage</a></li>
