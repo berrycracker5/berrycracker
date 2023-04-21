@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
-  const [showSubmenu, setShowSubmenu] = useState<boolean>(false);
+  const [showSubmenu, setShowSubmenu] = useState<boolean>(true);
 
   const onClickSidebarToggle = () => {
     setShowSidebar(!showSidebar);
@@ -31,37 +31,23 @@ const Sidebar = () => {
               <h2>Menu</h2>
             </header>
             <ul>
-              <li><a href="index.html">Homepage</a></li>
+              <li>
+                <span className={`opener ${showSubmenu ? "active" : ""}`} onClick={onClickSubmenu}>ABOUT ME</span>
+                <ul>
+                  <li>Introduction</li>
+                  <li><a href="#!">Strongs</a></li>
+                  <li><a href="#!">Tech Stacks</a></li>
+                  <li><a href="#!">Projects</a></li>
+                </ul>
+              </li>
+              {/* <li><a href="index.html">Homepage</a></li>
               <li><a href="generic.html">Generic</a></li>
-              <li><a href="elements.html">Elements</a></li>
-              <li>
-                <span className={`opener ${showSubmenu ? "active" : ""}`} onClick={onClickSubmenu}>Submenu</span>
-                <ul>
-                  <li><a href="/">Lorem Dolor</a></li>
-                  <li><a href="/">Ipsum Adipiscing</a></li>
-                  <li><a href="/">Tempus Magna</a></li>
-                  <li><a href="/">Feugiat Veroeros</a></li>
-                </ul>
-              </li>
-              <li><a href="/">Etiam Dolore</a></li>
-              <li><a href="/">Adipiscing</a></li>
-              <li>
-                <span className="opener">Another Submenu</span>
-                <ul>
-                  <li><a href="/">Lorem Dolor</a></li>
-                  <li><a href="/">Ipsum Adipiscing</a></li>
-                  <li><a href="/">Tempus Magna</a></li>
-                  <li><a href="/">Feugiat Veroeros</a></li>
-                </ul>
-              </li>
-              <li><a href="/">Maximus Erat</a></li>
-              <li><a href="/">Sapien Mauris</a></li>
-              <li><a href="/">Amet Lacinia</a></li>
+              <li><a href="elements.html">Elements</a></li> */}
             </ul>
           </nav>
 
           {/* <!-- Section --> */}
-          <section>
+          {/* <section>
             <header className="major">
               <h2>Ante interdum</h2>
             </header>
@@ -82,7 +68,7 @@ const Sidebar = () => {
             <ul className="actions">
               <li><a href="/" className="button">More</a></li>
             </ul>
-          </section>
+          </section> */}
 
           {/* <!-- Section --> */}
           <section>
