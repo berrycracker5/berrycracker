@@ -1,18 +1,35 @@
+/* eslint-disable jsx-a11y/anchor-is-valid  */
+/* eslint-disable jsx-a11y/anchor-has-content  */
+import { useDispatch } from "react-redux";
 import useMoveScroll from "../hooks/useMoveScroll";
-import React from "react";
+import React, { useEffect } from "react";
+import { setElementIntroduction, setElementProjects, setElementStrongs, setElementTechStacks } from "../redux/moveScroll";
 
 const Main: React.FC = () => {
-  const { element: elementProject, onMoveToElement: onMoveToElementProject } = useMoveScroll();
+  const { element: elementIntroduction, onMoveToElement: onMoveToElementIntroduction } = useMoveScroll();
+  const { element: elementStrongs, onMoveToElement: onMoveToElementStrongs } = useMoveScroll();
+  const { element: elementTechStacks, onMoveToElement: onMoveToElementTechStacks } = useMoveScroll();
+  const { element: elementProjects, onMoveToElement: onMoveToElementProjects } = useMoveScroll();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setElementIntroduction(elementIntroduction, onMoveToElementIntroduction));
+    dispatch(setElementStrongs(elementStrongs, onMoveToElementStrongs));
+    dispatch(setElementTechStacks(elementTechStacks, onMoveToElementTechStacks));
+    dispatch(setElementProjects(elementProjects, onMoveToElementProjects));
+  }, [])
 
   return (
     <>
       {/* <!-- Main --> */}
       <div id="main">
-        <div className="inner">
+        <div className="inner" >
 
           {/* <!-- Header --> */}
-          <header id="header" onClick={onMoveToElementProject}>
-            <a href="#!" className="logo"><strong>Designed</strong> by HTML5 UP</a>
+          <header id="header">
+            <a className="loo" >
+              <strong>Designed</strong> by HTML5 UP
+            </a>
             <ul className="icons">
               <li><a href="#!" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
               <li><a href="#!" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
@@ -23,8 +40,8 @@ const Main: React.FC = () => {
           </header>
 
           {/* <!-- Banner --> */}
-          <section id="banner">
-            <div className="content">
+          <section id="banner" ref={elementIntroduction}>
+            <div className="content" >
               <header>
                 <h1>Focus On <br />What I Can Do</h1>
                 <p>Jinwan, Park (Berrycracker5)</p>
@@ -44,8 +61,8 @@ const Main: React.FC = () => {
           </section>
 
           {/* <!-- Section --> */}
-          <section>
-            <header className="major">
+          <section >
+            <header className="major" ref={elementStrongs}>
               <h2>Strongs</h2>
             </header>
             <div className="features">
@@ -81,8 +98,8 @@ const Main: React.FC = () => {
           </section>
 
           {/* <!-- Section --> */}
-          <section>
-            <header ref={elementProject} className="major">
+          <section >
+            <header className="major" ref={elementProjects}>
               <h2>Projects</h2>
             </header>
             <div className="posts">

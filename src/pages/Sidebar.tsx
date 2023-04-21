@@ -1,11 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid  */
 /* eslint-disable jsx-a11y/anchor-has-content  */
-import React, { useState } from "react";
-import useMoveScroll from "../hooks/useMoveScroll";
+import { RootState } from "@/redux";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
   const [showSubmenu, setShowSubmenu] = useState<boolean>(true);
+  const onMoveToElementIntroduction = useSelector((state: RootState) => state.moveScroll.onMoveToElementIntroduction)
+  const onMoveToElementStrongs = useSelector((state: RootState) => state.moveScroll.onMoveToElementStrongs)
+  const onMoveToElementTechStacks = useSelector((state: RootState) => state.moveScroll.onMoveToElementTechStacks)
+  const onMoveToElementProjects = useSelector((state: RootState) => state.moveScroll.onMoveToElementProjects)
 
   const onClickSidebarToggle = () => {
     setShowSidebar(!showSidebar);
@@ -37,10 +42,10 @@ const Sidebar = () => {
               <li>
                 <span className={`opener ${showSubmenu ? "active" : ""}`} onClick={onClickSubmenu}>ABOUT ME</span>
                 <ul>
-                  <li><a>Introduction</a></li>
-                  <li><a>Strongs</a></li>
-                  <li><a>Tech Stacks</a></li>
-                  <li><a>Projects</a></li>
+                  <li><a onClick={onMoveToElementIntroduction}>Introduction</a></li>
+                  <li><a onClick={onMoveToElementStrongs}>Strongs</a></li>
+                  <li><a onClick={onMoveToElementTechStacks}>Tech Stacks</a></li>
+                  <li><a onClick={onMoveToElementProjects}>Projects</a></li>
                 </ul>
               </li>
               {/* <li><a href="index.html">Homepage</a></li>
@@ -50,7 +55,7 @@ const Sidebar = () => {
           </nav>
 
           {/* <!-- Section --> */}
-          <section>
+          {/* <section>
             <header className="major">
               <h2>Ante interdum</h2>
             </header>
@@ -71,7 +76,7 @@ const Sidebar = () => {
             <ul className="actions">
               <li><a href="/" className="button">More</a></li>
             </ul>
-          </section>
+          </section> */}
 
           {/* <!-- Section --> */}
           <section>
