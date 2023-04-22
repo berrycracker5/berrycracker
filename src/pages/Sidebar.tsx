@@ -3,8 +3,10 @@
 import { RootState } from "@/redux";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom"
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
   const [showSubmenu, setShowSubmenu] = useState<boolean>(true);
   const onMoveToElementIntroduction = useSelector((state: RootState) => state.moveScroll.onMoveToElementIntroduction)
@@ -21,23 +23,31 @@ const Sidebar = () => {
   }
 
   const handleClickIntroduction = () => {
+    navigate("/");
     onMoveToElementIntroduction();
     // setShowSidebar(false);
   }
 
   const handleClickStrongs = () => {
+    navigate("/");
     onMoveToElementStrongs();
     // setShowSidebar(false);
   }
 
   const handleClickTechStacks = () => {
+    navigate("/");
     onMoveToElementTechStacks();
     // setShowSidebar(false);
   }
 
   const handleClickProjects = () => {
+    navigate("/");
     onMoveToElementProjects();
     // setShowSidebar(false);
+  }
+
+  const handleClickStyles = () => {
+    navigate("/styles");
   }
 
   return (
@@ -69,7 +79,7 @@ const Sidebar = () => {
                 </ul>
               </li>
               <li><a>Web Programming</a></li>
-              <li><a>Styles</a></li>
+              <li><a onClick={handleClickStyles}>Styles</a></li>
               <li><a>Test Page</a></li>
               {/* <li><a href="generic.html">Generic</a></li> */}
               {/* <li><a href="elements.html">Elements</a></li> */}

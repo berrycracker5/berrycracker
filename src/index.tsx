@@ -5,6 +5,7 @@ import App from "./App";
 import rootReducer from "./redux";
 import { legacy_createStore } from "redux";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -21,7 +22,9 @@ const store = legacy_createStore(rootReducer);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter basename="/berrycracker">
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
