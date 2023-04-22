@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState<boolean>(false);
+  const [showSidebar, setShowSidebar] = useState<boolean>(true);
   const [showSubmenu, setShowSubmenu] = useState<boolean>(true);
   const onMoveToElementIntroduction = useSelector((state: RootState) => state.moveScroll.onMoveToElementIntroduction)
   const onMoveToElementStrongs = useSelector((state: RootState) => state.moveScroll.onMoveToElementStrongs)

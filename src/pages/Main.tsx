@@ -26,9 +26,9 @@ const Main: React.FC = () => {
         <div className="inner" >
 
           {/* <!-- Header --> */}
-          <header id="header">
+          <header id="header" ref={elementIntroduction}>
             <a className="loo" >
-              <strong>Designed</strong> by HTML5 UP
+              <strong >Designed</strong> by HTML5 UP
             </a>
             <ul className="icons">
               <li><a href="#!" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
@@ -40,7 +40,7 @@ const Main: React.FC = () => {
           </header>
 
           {/* <!-- Banner --> */}
-          <section id="banner" ref={elementIntroduction}>
+          <section id="banner" >
             <div className="content" >
               <header>
                 <h1>Focus On <br />What I Can Do</h1>
