@@ -3,6 +3,7 @@
 import { useDispatch } from "react-redux";
 import useMoveScroll from "../hooks/useMoveScroll";
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom"
 import { setElementIntroduction, setElementProjects, setElementStrongs, setElementTechStacks } from "../redux/moveScroll";
 
 const Main: React.FC = () => {
@@ -11,12 +12,17 @@ const Main: React.FC = () => {
   const { element: elementTechStacks, onMoveToElement: onMoveToElementTechStacks } = useMoveScroll();
   const { element: elementProjects, onMoveToElement: onMoveToElementProjects } = useMoveScroll();
   const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     dispatch(setElementIntroduction(elementIntroduction, onMoveToElementIntroduction));
     dispatch(setElementStrongs(elementStrongs, onMoveToElementStrongs));
     dispatch(setElementTechStacks(elementTechStacks, onMoveToElementTechStacks));
     dispatch(setElementProjects(elementProjects, onMoveToElementProjects));
+
+    if (location.state?.prevPage) {
+      onMoveToElementStrongs();
+    }
   }, [])
 
   return (

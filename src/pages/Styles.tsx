@@ -1,24 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid  */
 /* eslint-disable jsx-a11y/anchor-has-content  */
-import { useDispatch } from "react-redux";
-import useMoveScroll from "../hooks/useMoveScroll";
-import React, { useEffect } from "react";
-import { setElementIntroduction, setElementProjects, setElementStrongs, setElementTechStacks } from "../redux/moveScroll";
+import React from "react";
 
 const Styles: React.FC = () => {
-  const { element: elementIntroduction, onMoveToElement: onMoveToElementIntroduction } = useMoveScroll();
-  const { element: elementStrongs, onMoveToElement: onMoveToElementStrongs } = useMoveScroll();
-  const { element: elementTechStacks, onMoveToElement: onMoveToElementTechStacks } = useMoveScroll();
-  const { element: elementProjects, onMoveToElement: onMoveToElementProjects } = useMoveScroll();
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(setElementIntroduction(elementIntroduction, onMoveToElementIntroduction));
-    dispatch(setElementStrongs(elementStrongs, onMoveToElementStrongs));
-    dispatch(setElementTechStacks(elementTechStacks, onMoveToElementTechStacks));
-    dispatch(setElementProjects(elementProjects, onMoveToElementProjects));
-  }, [])
-
   return (
     <>
       {/* <!-- Main --> */}
@@ -26,7 +10,7 @@ const Styles: React.FC = () => {
         <div className="inner" >
 
           {/* <!-- Header --> */}
-          <header id="header" ref={elementIntroduction}>
+          <header id="header">
             <a className="loo" >
               <strong >Designed</strong> by HTML5 UP 2
             </a>

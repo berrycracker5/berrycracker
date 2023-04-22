@@ -23,7 +23,7 @@ const Sidebar = () => {
   }
 
   const handleClickIntroduction = () => {
-    navigate("/");
+    navigate("/", { state: { prevPage: "sidebar" } });  // TODO : 이렇게 state를 보내면 리덕스 안쓰고 페이지 내릴 수 있음 ㅎ..
     onMoveToElementIntroduction();
     // setShowSidebar(false);
   }
