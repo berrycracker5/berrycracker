@@ -31,11 +31,11 @@ const Main: React.FC = () => {
               <strong >Designed</strong> by HTML5 UP
             </a>
             <ul className="icons">
-              <li><a href="#!" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
-              <li><a href="#!" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
-              <li><a href="#!" className="icon brands fa-snapchat-ghost"><span className="label">Snapchat</span></a></li>
-              <li><a href="#!" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
-              <li><a href="#!" className="icon brands fa-medium-m"><span className="label">Medium</span></a></li>
+              <li><a className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
+              <li><a className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
+              <li><a className="icon brands fa-snapchat-ghost"><span className="label">Snapchat</span></a></li>
+              <li><a className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
+              <li><a className="icon brands fa-medium-m"><span className="label">Medium</span></a></li>
             </ul>
           </header>
 
@@ -44,12 +44,11 @@ const Main: React.FC = () => {
             <div className="content" >
               <header>
                 <h1>Focus On <br />What I Can Do</h1>
-                <p>Jinwan, Park (Berrycracker5)</p>
+                <p>PARK JINWAN</p>
               </header>
               <p>
-                안녕하세요 주니어 개발자 박진완입니다.<br />
-                여기는 저의 성장과 함께 발전할 페이지 입니다 :) <br />
-                감사합니다
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eaque nobis molestias earum quia enim, aut possimus eius,
+                eos quos illo culpa autem quisquam unde? Excepturi dolores necessitatibus maiores expedita.
               </p>
               {/* <ul className="actions">
                 <li><a className="button big">Like</a></li>

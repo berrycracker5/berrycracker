@@ -68,9 +68,11 @@ const Sidebar = () => {
                   <li><a onClick={handleClickProjects}>Projects</a></li>
                 </ul>
               </li>
-              {/* <li><a href="index.html">Homepage</a></li>
-              <li><a href="generic.html">Generic</a></li>
-              <li><a href="elements.html">Elements</a></li> */}
+              <li><a>Web Programming</a></li>
+              <li><a>Styles</a></li>
+              <li><a>Test Page</a></li>
+              {/* <li><a href="generic.html">Generic</a></li> */}
+              {/* <li><a href="elements.html">Elements</a></li> */}
             </ul>
           </nav>
 
@@ -103,7 +105,7 @@ const Sidebar = () => {
             <header className="major">
               <h2>Contact</h2>
             </header>
-            {/* <p>1995.05.19 박진완</p> */}
+            {/* <p>LG CNS</p> */}
             <ul className="contact">
               <li className="icon solid"></li>
               <li className="icon solid fa-envelope">wlsdhks5495@naver.com</li>
@@ -115,13 +117,14 @@ const Sidebar = () => {
 
           {/* <!-- Footer --> */}
           <footer id="footer">
-            <p className="copyright">&copy; <a href="https://berrycracker5.github.io/berrycracker">Parkjinwan</a> All rights reserved. <br />
+            <p className="copyright">&copy; <a href="https://berrycracker5.github.io/berrycracker">PARK JINWAN</a> All rights reserved. <br />
               Demo Images From <a href="https://unsplash.com">UNSPLASH</a>. <br />
               Designed By <a href="https://html5up.net">HTML5 UP</a>.<br />
             </p>
           </footer>
 
         </div>
+
         <a className="toggle" onClick={onClickSidebarToggle} />
       </div>
     </>
