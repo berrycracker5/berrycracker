@@ -1,10 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid  */
 /* eslint-disable jsx-a11y/anchor-has-content  */
-import { useDispatch } from "react-redux";
-import useMoveScroll from "../hooks/useMoveScroll";
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom"
-import { setElementIntroduction, setElementProjects, setElementStrongs, setElementTechStacks } from "../redux/moveScroll";
+import { useLocation } from "react-router-dom";
+import useMoveScroll from "../hooks/useMoveScroll";
 
 interface ILocationState {
   prevPage: string;
@@ -77,7 +75,7 @@ const Main: React.FC = () => {
               </ul> */}
             </div>
             <span className="image object">
-              <img src={process.env.PUBLIC_URL + "/images/pic10.jpg"} alt="" />
+              <img src={process.env.PUBLIC_URL + "/images/img_main.jpg"} alt="" />
             </span>
           </section>
 
@@ -88,32 +86,74 @@ const Main: React.FC = () => {
             </header>
             <div className="features">
               <article>
-                <span className="icon fa-gem"></span>
+                <span className="icon solid fa-thumbs-up"></span>
+                <div className="content">
+                  <h3>Confidence</h3>
+                  <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                </div>
+              </article>
+              <article>
+                <span className="icon solid fa-fist-raised"></span>
                 <div className="content">
                   <h3>Responsibility</h3>
                   <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                 </div>
               </article>
               <article>
-                <span className="icon solid fa-paper-plane"></span>
+                <span className="icon solid fa-arrow-up"></span>
                 <div className="content">
                   <h3>Continuous Development</h3>
                   <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                 </div>
               </article>
               <article>
-                <span className="icon solid fa-rocket"></span>
+                <span className="icon solid fa-comments"></span>
                 <div className="content">
                   <h3>Communication</h3>
                   <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
                 </div>
               </article>
+            </div>
+          </section>
+
+          {/* <!-- Section --> */}
+          <section >
+            <header className="major" ref={elementTechStacks}>
+              <h2>TechStacks</h2>
+            </header>
+            <div className="posts">
               <article>
-                <span className="icon solid fa-signal"></span>
-                <div className="content">
-                  <h3>Experience</h3>
-                  <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-                </div>
+                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_git.jpg`} alt="" /></a>
+              </article>
+              <article>
+                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_typescript.jpg`} alt="" /></a>
+              </article>
+              <article>
+                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_java.jpg`} alt="" /></a>
+              </article>
+              <article>
+                <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_react.jpg`} alt="" /></a>
+                {/* <h3>React</h3> */}
+                {/* <p>React</p>
+                <ul className="actions">
+                  <li><a href="/" className="button">More</a></li>
+                </ul> */}
+              </article>
+              <article>
+                <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_redux.jpg`} alt="" /></a>
+                {/* <h3>Tempus ullamcorper</h3> */}
+                {/* <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> */}
+                {/* <ul className="actions"> */}
+                {/* <li><a href="/" className="button">More</a></li> */}
+                {/* </ul> */}
+              </article>
+              <article>
+                <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_react-router.jpg`} alt="" /></a>
+                {/* <h3>Nulla amet dolore</h3> */}
+                {/* <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> */}
+                {/* <ul className="actions"> */}
+                {/* <li><a href="/" className="button">More</a></li> */}
+                {/* </ul> */}
               </article>
             </div>
           </section>

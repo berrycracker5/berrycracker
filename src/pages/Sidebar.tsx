@@ -44,7 +44,7 @@ const Sidebar = () => {
 
           {/* <!-- Search --> */}
           <section id="search" className="alt">
-            <form method="post" action="/">
+            <form onSubmit={() => { alert("개발 중인 기능입니다") }}>
               <input type="text" name="query" id="query" placeholder="Search" />
             </form>
           </section>
