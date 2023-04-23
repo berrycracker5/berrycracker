@@ -1,18 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid  */
 /* eslint-disable jsx-a11y/anchor-has-content  */
-import { RootState } from "@/redux";
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
   const [showSubmenu, setShowSubmenu] = useState<boolean>(true);
-  const onMoveToElementIntroduction = useSelector((state: RootState) => state.moveScroll.onMoveToElementIntroduction)
-  const onMoveToElementStrongs = useSelector((state: RootState) => state.moveScroll.onMoveToElementStrongs)
-  const onMoveToElementTechStacks = useSelector((state: RootState) => state.moveScroll.onMoveToElementTechStacks)
-  const onMoveToElementProjects = useSelector((state: RootState) => state.moveScroll.onMoveToElementProjects)
 
   const onClickSidebarToggle = () => {
     setShowSidebar(!showSidebar);
@@ -23,27 +17,19 @@ const Sidebar = () => {
   }
 
   const handleClickIntroduction = () => {
-    navigate("/", { state: { prevPage: "sidebar" } });  // TODO : 이렇게 state를 보내면 리덕스 안쓰고 페이지 내릴 수 있음 ㅎ..
-    onMoveToElementIntroduction();
-    // setShowSidebar(false);
+    navigate("/", { state: { prevPage: "sidebar" } });
   }
 
   const handleClickStrongs = () => {
-    navigate("/");
-    onMoveToElementStrongs();
-    // setShowSidebar(false);
+    navigate("/", { state: { prevPage: "sidebar", scrollTo: "Strongs" } });
   }
 
   const handleClickTechStacks = () => {
-    navigate("/");
-    onMoveToElementTechStacks();
-    // setShowSidebar(false);
+    navigate("/", { state: { prevPage: "sidebar", scrollTo: "TechStacks" } });
   }
 
   const handleClickProjects = () => {
-    navigate("/");
-    onMoveToElementProjects();
-    // setShowSidebar(false);
+    navigate("/", { state: { prevPage: "sidebar", scrollTo: "Projects" } });
   }
 
   const handleClickStyles = () => {

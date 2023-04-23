@@ -1,3 +1,12 @@
+/**
+ * 23.4.23
+ * 원래는 사이드바 메뉴 클릭시 메인화면에서 스크롤 해주기 위해
+ * Ref와 scroll 함수를 리듀스에 저장해서 사용하려했는데,
+ * react-router-dom 사용 후, state로 전달하여 확인 후 스크롤하는 로직으로 변경되면서
+ * 사용하지 않게 되었음.
+ * 그래도 리덕스 사용하는 표준으로 참고하기 위해 코드는 삭제하지 않음
+ */
+
 // 액션 타입 선언
 const SET_ELEMENT_INTRODUCTION = "moveScroll/SET_ELEMENT_INTRODUCTION" as const;
 const SET_ELEMENT_STRONGS = "moveScroll/SET_ELEMENT_STRONGS" as const;

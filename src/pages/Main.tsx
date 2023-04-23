@@ -6,24 +6,40 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom"
 import { setElementIntroduction, setElementProjects, setElementStrongs, setElementTechStacks } from "../redux/moveScroll";
 
+interface ILocationState {
+  prevPage: string;
+  scrollTo: string;
+}
 const Main: React.FC = () => {
   const { element: elementIntroduction, onMoveToElement: onMoveToElementIntroduction } = useMoveScroll();
   const { element: elementStrongs, onMoveToElement: onMoveToElementStrongs } = useMoveScroll();
   const { element: elementTechStacks, onMoveToElement: onMoveToElementTechStacks } = useMoveScroll();
   const { element: elementProjects, onMoveToElement: onMoveToElementProjects } = useMoveScroll();
-  const dispatch = useDispatch();
-  const location = useLocation();
+  const locationState = useLocation().state as ILocationState;
 
   useEffect(() => {
-    dispatch(setElementIntroduction(elementIntroduction, onMoveToElementIntroduction));
-    dispatch(setElementStrongs(elementStrongs, onMoveToElementStrongs));
-    dispatch(setElementTechStacks(elementTechStacks, onMoveToElementTechStacks));
-    dispatch(setElementProjects(elementProjects, onMoveToElementProjects));
-
-    if (location.state?.prevPage) {
-      onMoveToElementStrongs();
+    // 사이드바에서 메뉴 클릭한 경우
+    if (locationState?.prevPage === "sidebar") {
+      // 해당 콘텐츠 섹션으로 스크롤링
+      switch (locationState?.scrollTo) {
+        case "Introduction":
+          onMoveToElementIntroduction();
+          break;
+        case "Strongs":
+          onMoveToElementStrongs();
+          break;
+        case "TechStacks":
+          onMoveToElementTechStacks();
+          break;
+        case "Projects":
+          onMoveToElementProjects();
+          break;
+        default:
+          onMoveToElementIntroduction();
+          break;
+      }
     }
-  }, [])
+  })
 
   return (
     <>
