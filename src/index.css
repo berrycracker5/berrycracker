@@ -3200,6 +3200,12 @@ button:disabled,
   top: 0;
   left: 0;
   width: 26em;
+  box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
+  height: 100%;
+}
+
+#sidebar.inactive {
+  box-shadow: none;
 }
 
 #sidebar h2 {
@@ -3288,7 +3294,7 @@ button:disabled,
   margin-left: -26em;
 }
 
-@media screen and (max-width: 1680px) {
+/* @media screen and (max-width: 1680px) {
   #sidebar {
     width: 24em;
   }
@@ -3319,10 +3325,10 @@ button:disabled,
   #sidebar.inactive {
     margin-left: -24em;
   }
-}
+} */
 
 @media screen and (max-width: 1280px) {
-  #sidebar {
+  /* #sidebar {
     box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
     height: 100%;
     left: 0;
@@ -3364,11 +3370,11 @@ button:disabled,
 
   body.is-preload #sidebar {
     display: none;
-  }
+  } */
 }
 
 @media screen and (max-width: 736px) {
-  #sidebar .toggle {
+  /* #sidebar .toggle {
     text-indent: 7.25em;
     width: 7.25em;
   }
@@ -3390,7 +3396,7 @@ button:disabled,
     position: absolute;
     top: 1em;
     width: 5em;
-  }
+  } */
 }
 
 /* Header */
