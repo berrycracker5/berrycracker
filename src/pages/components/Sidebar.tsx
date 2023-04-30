@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
-  const [showSidebar, setShowSidebar] = useState<boolean>(true);
+  const [showSidebar, setShowSidebar] = useState<boolean>(false);
   const [showSubmenu, setShowSubmenu] = useState<boolean>(true);
 
   const onClickSidebarToggle = () => {
@@ -18,22 +18,35 @@ const Sidebar = () => {
 
   const handleClickIntroduction = () => {
     navigate("/", { state: { prevPage: "sidebar" } });
+    setShowSidebar(false);
   }
 
   const handleClickStrongs = () => {
     navigate("/", { state: { prevPage: "sidebar", scrollTo: "Strongs" } });
+    setShowSidebar(false);
   }
 
   const handleClickTechStacks = () => {
     navigate("/", { state: { prevPage: "sidebar", scrollTo: "TechStacks" } });
+    setShowSidebar(false);
   }
 
   const handleClickProjects = () => {
     navigate("/", { state: { prevPage: "sidebar", scrollTo: "Projects" } });
+    setShowSidebar(false);
   }
 
   const handleClickStyles = () => {
     navigate("/styles");
+    scrollToTop();
+    setShowSidebar(false);
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 
   return (
@@ -116,6 +129,12 @@ const Sidebar = () => {
             <p className="copyright">&copy; <a href="https://berrycracker5.github.io/berrycracker">PARK JINWAN</a> All rights reserved. <br />
               Demo Images From <a href="https://unsplash.com">UNSPLASH</a>. <br />
               Designed By <a href="https://html5up.net">HTML5 UP</a>.<br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             </p>
           </footer>
 

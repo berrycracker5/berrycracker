@@ -75,8 +75,8 @@ const Main: React.FC = () => {
           </section>
 
           {/* <!-- Section --> */}
-          <section >
-            <header className="major" ref={elementStrongs}>
+          <section ref={elementStrongs}>
+            <header className="major" >
               <h2>Strongs</h2>
             </header>
             <div className="features">
@@ -120,32 +120,11 @@ const Main: React.FC = () => {
           </section>
 
           {/* <!-- Section --> */}
-          <section >
-            <header className="major" ref={elementTechStacks}>
+          <section ref={elementTechStacks}>
+            <header className="major" >
               <h2>TechStacks</h2>
             </header>
             <div className="posts">
-              <article>
-                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_git.jpg`} alt="" /></a>
-                <p>
-                  기본적인 git 사용법 외에, 브랜치 전략을 설계해본 경험이 있습니다.
-                  stash와 squash를 자주 사용하며 필요시 cherry-pick과 revert를 활용할 수 있습니다.
-                </p>
-              </article>
-              <article>
-                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_typescript.jpg`} alt="" /></a>
-                <p>
-                  CRA환경에서 typescript를 사용할 수 있습니다. any 사용을 지양하며,
-                  API통신에서 백엔드 모델링를 참고하여 type을 설계할 수 있습니다.
-                </p>
-              </article>
-              <article>
-                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_java.jpg`} alt="" /></a>
-                <p>
-                  코딩테스트 메인 언어입니다. FE 직무를 맡게된 현재에도 사내에서 시행하는 java시험 덕분에 꾸준히 리마인드되고 있습니다.
-                  (Cos Pro 1급 1000점, 프로그래머스 2~3레벨 수준)
-                </p>
-              </article>
               <article>
                 <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_react.jpg`} alt="" /></a>
                 <p>
@@ -180,12 +159,33 @@ const Main: React.FC = () => {
                 {/* <li><a href="/" className="button">More</a></li> */}
                 {/* </ul> */}
               </article>
+              <article>
+                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_git.jpg`} alt="" /></a>
+                <p>
+                  기본적인 git 사용법 외에, 브랜치 전략을 설계해본 경험이 있습니다.
+                  stash와 squash를 자주 사용하며, 필요시 cherry-pick과 revert를 활용할 수 있습니다.
+                </p>
+              </article>
+              <article>
+                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_typescript.jpg`} alt="" /></a>
+                <p>
+                  React 환경에서 typescript를 사용할 수 있습니다. any 사용을 지양하며,
+                  API통신에서 백엔드 모델링를 참고하여 type을 설계할 수 있습니다.
+                </p>
+              </article>
+              <article>
+                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_java.jpg`} alt="" /></a>
+                <p>
+                  코딩테스트 메인 언어입니다. FE 직무를 맡게된 현재에도 사내에서 시행하는 java시험 덕분에 꾸준히 리마인드되고 있습니다.
+                  (COS Pro 1급 1000점, 프로그래머스 2~3레벨 수준)
+                </p>
+              </article>
             </div>
           </section>
 
           {/* <!-- Section --> */}
-          <section >
-            <header className="major" ref={elementProjects}>
+          <section ref={elementProjects}>
+            <header className="major" >
               <h2>Projects</h2>
             </header>
             <div className="posts">
