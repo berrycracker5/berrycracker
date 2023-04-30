@@ -44,13 +44,13 @@ const Main: React.FC = () => {
     <>
       {/* <!-- Main --> */}
       <div id="main">
-        <div className="inner" >
+        <div className="inner" ref={elementIntroduction}>
 
           {/* <!-- Header --> */}
           <MainHeader />
 
           {/* <!-- Banner --> */}
-          <section id="banner" ref={elementIntroduction}>
+          <section id="banner">
             <div className="content" >
               <header>
                 <h1>Focus On <br />What I Can Do</h1>
