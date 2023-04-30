@@ -60,10 +60,9 @@ const Main: React.FC = () => {
                 안녕하세요 FE 직무를 맡고 있는 3년차 개발자 박진완입니다.<br />
                 이 블로그는 저의 성장과 함께 기록될 것 입니다!<br />
                 방문해주셔서 감사합니다 :)
-                <br />
-                <br />
-                <br />
-                From. 2023-04-15
+              </p>
+              <p style={{ textAlign: "right" }}>
+                From 2023.04.15
               </p>
               {/* <ul className="actions">
                 <li><a className="button big">Like</a></li>

@@ -3099,7 +3099,7 @@ button:disabled,
 }
 
 #main>.inner>section {
-  padding: 3em 0 4em 0;
+  padding: 3em 0 1em 0;
   border-top: solid 2px rgba(210, 215, 217, 0.75);
 }
 
@@ -3113,7 +3113,7 @@ button:disabled,
   }
 
   #main>.inner>section {
-    padding: 5em 0 3em 0;
+    padding: 3em 0 1em 0;
   }
 }
 
@@ -3123,7 +3123,7 @@ button:disabled,
   }
 
   #main>.inner>section {
-    padding: 4em 0 2em 0;
+    padding: 3em 0 1em 0;
   }
 }
 
@@ -3492,7 +3492,7 @@ button:disabled,
   -moz-object-fit: cover;
   -webkit-object-fit: cover;
   -ms-object-fit: cover;
-  object-fit: cover;
+  object-fit: contain;
   -moz-object-position: center;
   -webkit-object-position: center;
   -ms-object-position: center;
