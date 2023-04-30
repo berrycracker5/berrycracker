@@ -12,7 +12,8 @@ const NotFound: React.FC = () => {
           {/* <!-- Header --> */}
           <header id="header">
             <a className="loo" >
-              <strong >Designed</strong> by HTML5 UP
+              {/* <strong >Designed</strong> by HTML5 UP */}
+              Berrycracker
             </a>
             <ul className="icons">
               <li><a className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>

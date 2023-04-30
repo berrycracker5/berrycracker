@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid  */
 /* eslint-disable jsx-a11y/anchor-has-content  */
 import React from "react";
+import MainHeader from "./components/MainHeader";
 
 const Styles: React.FC = () => {
   return (
@@ -10,18 +11,7 @@ const Styles: React.FC = () => {
         <div className="inner" >
 
           {/* <!-- Header --> */}
-          <header id="header">
-            <a className="loo" >
-              <strong >Designed</strong> by HTML5 UP 2
-            </a>
-            <ul className="icons">
-              <li><a className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
-              <li><a className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
-              <li><a className="icon brands fa-snapchat-ghost"><span className="label">Snapchat</span></a></li>
-              <li><a className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
-              <li><a className="icon brands fa-medium-m"><span className="label">Medium</span></a></li>
-            </ul>
-          </header>
+          <MainHeader />
 
           {/* <!-- Content --> */}
           <section>
@@ -326,24 +316,24 @@ const Styles: React.FC = () => {
                 <form method="post" action="#">
                   <div className="row gtr-uniform">
                     <div className="col-6 col-12-xsmall">
-                      <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                      <input type="text" name="demo-name" id="demo-name" defaultValue="" placeholder="Name" />
                     </div>
                     <div className="col-6 col-12-xsmall">
-                      <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                      <input type="email" name="demo-email" id="demo-email" defaultValue="" placeholder="Email" />
                     </div>
                     {/* <!-- Break --> */}
                     <div className="col-12">
                       <select name="demo-category" id="demo-category">
-                        <option value="">- Category -</option>
-                        <option value="1">Manufacturing</option>
-                        <option value="1">Shipping</option>
-                        <option value="1">Administration</option>
-                        <option value="1">Human Resources</option>
+                        <option defaultValue="">- Category -</option>
+                        <option defaultValue="1">Manufacturing</option>
+                        <option defaultValue="1">Shipping</option>
+                        <option defaultValue="1">Administration</option>
+                        <option defaultValue="1">Human Resources</option>
                       </select>
                     </div>
                     {/* <!-- Break --> */}
                     <div className="col-4 col-12-small">
-                      <input type="radio" id="demo-priority-low" name="demo-priority" checked />
+                      <input type="radio" id="demo-priority-low" name="demo-priority" defaultChecked />
                       <label htmlFor="demo-priority-low">Low</label>
                     </div>
                     <div className="col-4 col-12-small">
@@ -360,7 +350,7 @@ const Styles: React.FC = () => {
                       <label htmlFor="demo-copy">Email me a copy</label>
                     </div>
                     <div className="col-6 col-12-small">
-                      <input type="checkbox" id="demo-human" name="demo-human" checked />
+                      <input type="checkbox" id="demo-human" name="demo-human" defaultChecked />
                       <label htmlFor="demo-human">I am a human</label>
                     </div>
                     {/* <!-- Break --> */}
@@ -370,8 +360,8 @@ const Styles: React.FC = () => {
                     {/* <!-- Break --> */}
                     <div className="col-12">
                       <ul className="actions">
-                        <li><input type="submit" value="Send Message" className="primary" /></li>
-                        <li><input type="reset" value="Reset" /></li>
+                        <li><input type="submit" defaultValue="Send Message" className="primary" /></li>
+                        <li><input type="reset" defaultValue="Reset" /></li>
                       </ul>
                     </div>
                   </div>

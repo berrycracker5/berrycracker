@@ -1,5 +1,5 @@
 import MainWrapper from "./pages/components/MainWrapper";
-import Sidebar from "./pages/Sidebar";
+import Sidebar from "./pages/components/Sidebar";
 
 const App: React.FC = () => {
   return (
