@@ -102,7 +102,7 @@ const Main: React.FC = () => {
                 <div className="content">
                   <h3>Responsibility</h3>
                   <p>
-                    제가 맡은 영역/기능에서 어떻게든 해결하려 노력합니다.
+                    제가 맡은 부분을 완성시킬 수 있도록 최선을 다합니다.
                   </p>
                 </div>
               </article>
@@ -125,9 +125,11 @@ const Main: React.FC = () => {
             </header>
             <div className="posts">
               <article>
-                <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_react.jpg`} alt="" /></a>
+                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_react.jpg`} alt="" /></a>
+                <h3>React 17</h3>
+                {/* <p>TSX, Hooks, Funtional Component, CRA, craco</p> */}
                 <p>
-                  현재 직무에서 사용하는 메인 라이브러리 입니다. 함수형/TSX 환경에서 rendering에 대한 개념과 SPA 구조를 이해하고 있으며,
+                  Typescript를 활용하여 Functional Component를 구성하고 Hook을 사용한 rendering/optimizing 개념과 SPA 구조를 이해하고 있습니다.
                   CRA환경에서 craco를 활용할 수 있습니다.
                 </p>
                 {/* <h3>React</h3> */}
@@ -137,45 +139,52 @@ const Main: React.FC = () => {
                 {/* </ul> */}
               </article>
               <article>
-                <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_redux.jpg`} alt="" /></a>
+                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_redux.jpg`} alt="" /></a>
+                <h3>Redux</h3>
                 <p>
-                  redux를 활용해서 state를 managing할 수 있습니다. typescript 환경에 적용이 가능합니다.
+                  {/* Redux Toolkit, Redux with Typescript, useDispatch, useSelector */}
+                  Redux를 활용해서 state를 managing 할 수 있습니다. Typescript 적용이 가능합니다.
                 </p>
                 {/* <h3>Tempus ullamcorper</h3> */}
                 {/* <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> */}
                 {/* <ul className="actions"> */}
-                {/* <li><a href="/" className="button">More</a></li> */}
+                {/* <li><a className="button">More</a></li> */}
                 {/* </ul> */}
               </article>
               <article>
-                <a href="/" className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_react-router.jpg`} alt="" /></a>
+                <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_react-router.jpg`} alt="" /></a>
+                <h3>React-Router-dom</h3>
                 <p>
-                  react-router-dom-v5 버전을 경험해보았습니다. 현재 페이지는 v6를 사용하고 있으며, 웹페이지의 화면 UX를 설계해보았고 이를 history 형태로 적용할 수 있습니다.
+                  {/* Page Design, react-router-dom-v5/v6, useHistory, useLocation, useNavigation */}
+                  page에서 UX 흐름을 설계하고, react-router-dom-v5 버전에서 history 형태로 적용할 수 있습니다. 이 블로그는 v6를 사용하고 있습니다.
                 </p>
                 {/* <h3>Nulla amet dolore</h3> */}
                 {/* <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> */}
                 {/* <ul className="actions"> */}
-                {/* <li><a href="/" className="button">More</a></li> */}
+                {/* <li><a className="button">More</a></li> */}
                 {/* </ul> */}
               </article>
               <article>
                 <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_git.jpg`} alt="" /></a>
+                <h3>Git</h3>
                 <p>
-                  기본적인 git 사용법 외에, 브랜치 전략을 설계해본 경험이 있습니다.
-                  stash와 squash를 자주 사용하며, 필요시 cherry-pick과 revert를 활용할 수 있습니다.
+                  기본적인 commit/push/pull 외에, 브랜치 전략을 설계해본 경험이 있습니다.
+                  stash와 squash를 주로 사용하며, 필요시 cherry-pick과 revert를 활용할 수 있습니다.
                 </p>
               </article>
               <article>
                 <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_typescript.jpg`} alt="" /></a>
+                <h3>Typescript</h3>
                 <p>
-                  React 환경에서 typescript를 사용할 수 있습니다. any 사용을 지양하며,
-                  API통신에서 백엔드 모델링를 참고하여 type을 설계할 수 있습니다.
+                  React에서 Typescript를 사용할 수 있습니다. any type 사용을 지양하며,
+                  API통신에서 백엔드 모델링이 적용된 Interface(type)를 설계할 수 있습니다.
                 </p>
               </article>
               <article>
                 <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_java.jpg`} alt="" /></a>
+                <h3>Java</h3>
                 <p>
-                  코딩테스트 메인 언어입니다. FE 직무를 맡게된 현재에도 사내에서 시행하는 java시험 덕분에 꾸준히 리마인드되고 있습니다.
+                  코딩테스트 메인 언어입니다. FE 직무를 맡게된 현재에도 사내에서 시행하는 Java시험 덕분에 꾸준히 리마인드되고 있습니다.
                   (COS Pro 1급 1000점, 프로그래머스 2~3레벨 수준)
                 </p>
               </article>
