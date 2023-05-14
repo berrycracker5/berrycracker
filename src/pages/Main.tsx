@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import useMoveScroll from "../hooks/useMoveScroll";
-import MainHeader from "./components/MainHeader";
+import MainHeader from "../components/MainHeader";
 
 interface ILocationState {
   prevPage: string;

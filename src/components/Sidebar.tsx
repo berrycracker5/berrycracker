@@ -42,6 +42,12 @@ const Sidebar = () => {
     setShowSidebar(false);
   }
 
+  const handleClickPosts = () => {
+    navigate("/posts");
+    scrollToTop();
+    setShowSidebar(false);
+  }
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -77,7 +83,7 @@ const Sidebar = () => {
                   <li><a onClick={handleClickProjects}>Projects</a></li>
                 </ul>
               </li>
-              <li><a>Posts</a></li>
+              <li><a onClick={handleClickPosts}>Posts</a></li>
               <li><a onClick={handleClickStyles}>Styles</a></li>
               <li><a>Test Page</a></li>
               {/* <li><a href="generic.html">Generic</a></li> */}
