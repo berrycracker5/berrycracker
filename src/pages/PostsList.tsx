@@ -3,11 +3,12 @@
 /* eslint-disable react/jsx-pascal-case  */
 
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import MainHeader from "../components/MainHeader";
 import styled from "styled-components";
-import Post from "@/models/Post";
+import MPost from "@/models/MPost";
 import moment from "moment";
+import { MyPosts } from "../MyPosts";
 
 const Div_postslistWrapper = styled.div`
   display: flex;
@@ -28,13 +29,13 @@ const Div_postslistsHeader = styled.div`
 const Div_postsWrapper = styled.div`
   width: 100%;
 `;
-const Div_posts = styled.div`
+const Button_posts = styled.button`
   display: flex;
   width: 100%;
   border-bottom: solid;
   border-width: thin;
   margin-top: 0.2rem;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 `;
 const Span_postsHeader = styled.span`
   color: black;
@@ -51,40 +52,21 @@ const Span_posts = styled.span`
   text-overflow : ellipsis;
 `;
 
-// 실제 포스트 내용 (바깥으로 빼야될텐데...)
-const posts: Post[] = [
-  {
-    postNo: "1",
-    postTitle: "첫번째 제목입니다",
-    postText: "내용 1",
-    postOthers: "신규",
-    createDate: "20230514",
-  },
-  {
-    postNo: "2",
-    postTitle: "두번째 제목입니다",
-    postText: "내용 2",
-    postOthers: "-",
-    createDate: "20230513",
-  },
-  {
-    postNo: "3",
-    postTitle: "첫번째 제목입니다 3333",
-    postText: "내용 2",
-    postOthers: "-",
-    createDate: "20230511",
-  },
-]
-
 interface ILocationState {
 
 }
 const PostsList: React.FC = () => {
+  const posts: MPost[] = MyPosts;
+  const navigate = useNavigate();
   const locationState = useLocation().state as ILocationState;
 
   useEffect(() => {
 
   })
+
+  const handleClickPost = (item: MPost) => {
+    navigate("/posts/post", { state: { post: item } });
+  }
 
   return (
     <>
@@ -115,7 +97,7 @@ const PostsList: React.FC = () => {
             <Div_postsWrapper>
               {posts.map((item, index) => {
                 return (
-                  <Div_posts>
+                  <Button_posts key={index} onClick={() => handleClickPost(item)}>
                     <Span_posts style={{ width: "10%" }}>
                       {item.postNo}
                     </Span_posts>
@@ -128,7 +110,7 @@ const PostsList: React.FC = () => {
                     <Span_posts style={{ width: "10%" }}>
                       {item.postOthers}
                     </Span_posts>
-                  </Div_posts>
+                  </Button_posts>
                 )
               })}
             </Div_postsWrapper>
