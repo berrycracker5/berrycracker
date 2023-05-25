@@ -6,14 +6,19 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const navigate = useNavigate();
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
-  const [showSubmenu, setShowSubmenu] = useState<boolean>(true);
+  const [showAboutMeSubMenu, setShowAboutMeSubMenu] = useState<boolean>(true);
+  const [showPostsSubMenu, setShowPostsSubMenu] = useState<boolean>(true);
 
   const onClickSidebarToggle = () => {
     setShowSidebar(!showSidebar);
   }
 
-  const onClickSubmenu = () => {
-    setShowSubmenu(!showSubmenu);
+  const onClickAboutMeSubmenu = () => {
+    setShowAboutMeSubMenu(!showAboutMeSubMenu);
+  }
+
+  const onClickPostsSubmenu = () => {
+    setShowAboutMeSubMenu(!showAboutMeSubMenu);
   }
 
   const handleClickIntroduction = () => {
@@ -42,7 +47,7 @@ const Sidebar = () => {
     setShowSidebar(false);
   }
 
-  const handleClickPosts = () => {
+  const handleClickHtmlCss = () => {
     navigate("/posts");
     scrollToTop();
     setShowSidebar(false);
@@ -75,7 +80,7 @@ const Sidebar = () => {
             </header>
             <ul>
               <li>
-                <span className={`opener ${showSubmenu ? "active" : ""}`} onClick={onClickSubmenu}>ABOUT ME</span>
+                <span className={`opener ${showAboutMeSubMenu ? "active" : ""}`} onClick={onClickAboutMeSubmenu}>ABOUT ME</span>
                 <ul>
                   <li><a onClick={handleClickIntroduction}>Introduction</a></li>
                   <li><a onClick={handleClickStrongs}>Strongs</a></li>
@@ -83,9 +88,19 @@ const Sidebar = () => {
                   <li><a onClick={handleClickProjects}>Projects</a></li>
                 </ul>
               </li>
-              <li><a onClick={handleClickPosts}>Posts</a></li>
-              <li><a onClick={handleClickStyles}>Styles</a></li>
-              <li><a>Test Page</a></li>
+              <li>
+                <span className={`opener ${showPostsSubMenu ? "active" : ""}`} onClick={onClickPostsSubmenu}>Posts</span>
+                <ul>
+                  <li><a onClick={handleClickHtmlCss}>HTML & CSS</a></li>
+                  <li><a>Javascript</a></li>
+                  <li><a>React</a></li>
+                  <li><a>React Native</a></li>
+                  <li><a>Git</a></li>
+                  <li><a>Others</a></li>
+                </ul>
+              </li>
+              {/* <li><a onClick={handleClickStyles}>Styles</a></li> */}
+              {/* <li><a>Test Page</a></li> */}
               {/* <li><a href="generic.html">Generic</a></li> */}
               {/* <li><a href="elements.html">Elements</a></li> */}
             </ul>

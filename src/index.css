@@ -3210,6 +3210,7 @@ button:disabled,
 
 #sidebar h2 {
   font-size: 1.38889em;
+  margin: 0 0 1rem 0;
 }
 
 #sidebar>.inner {
