@@ -2,10 +2,17 @@ import MPost from "./models/MPost";
 
 export const MyPosts: MPost[] = [
   {
+    postNo: "4",
+    postTitle: "스윽 왔다가 엄청 많이 작업하고 감..",
+    postContent: "후우...",
+    postOthers: "신규",
+    createDate: "20230526",
+  },
+  {
     postNo: "3",
     postTitle: "세번째 제목입니다",
     postContent: "내용 3",
-    postOthers: "신규",
+    postOthers: "-",
     createDate: "20230514",
   },
   {

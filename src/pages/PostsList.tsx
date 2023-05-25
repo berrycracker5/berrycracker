@@ -32,10 +32,11 @@ const Div_postsWrapper = styled.div`
 const Button_posts = styled.button`
   display: flex;
   width: 100%;
+  height: 100%;
   border-bottom: solid;
   border-width: thin;
   margin-top: 0.2rem;
-  padding: 0 0.5rem;
+  padding: 2rem 0.5rem;
 `;
 const Span_postsHeader = styled.span`
   color: black;
@@ -101,7 +102,8 @@ const PostsList: React.FC = () => {
                     <Span_posts style={{ width: "10%" }}>
                       {item.postNo}
                     </Span_posts>
-                    <Span_posts style={{ width: "55%", textAlign: "left" }}>
+                    {/* <Span_posts style={{ width: "55%", textAlign: "left" }}> */}
+                    <Span_posts style={{ width: "55%" }}>
                       {item.postTitle}
                     </Span_posts>
                     <Span_posts style={{ width: "25%" }}>
