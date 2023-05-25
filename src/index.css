@@ -3202,6 +3202,7 @@ button:disabled,
   width: 26em;
   box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
   height: 100%;
+  /* overflow: auto; */
 }
 
 #sidebar.inactive {
@@ -3217,6 +3218,9 @@ button:disabled,
   padding: 2.22222em 2.22222em 2.44444em 2.22222em;
   position: relative;
   width: 26em;
+  height: inherit;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #sidebar>.inner>* {
