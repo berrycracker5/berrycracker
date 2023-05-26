@@ -82,7 +82,7 @@ const Main: React.FC = () => {
             <article>
               <span className="icon solid fa-thumbs-up"></span>
               <div className="content">
-                <h3>Confidence</h3>
+                <h1>Confidence</h1>
                 <p>
                   {/* 제가 설계/개발한 로직을 다른사람이 납득할 수 있게 설명할 수 있습니다. */}
                 </p>
@@ -91,7 +91,7 @@ const Main: React.FC = () => {
             <article>
               <span className="icon solid fa-comments"></span>
               <div className="content">
-                <h3>Communication</h3>
+                <h1>Communication</h1>
                 <p>
                   {/* 기획자/디자이너와 UI/UX관련, 백엔드 개발자와 API관련한 소통이 원활히 이루어지도록 노력합니다. */}
                 </p>
@@ -100,7 +100,7 @@ const Main: React.FC = () => {
             <article>
               <span className="icon solid fa-fist-raised"></span>
               <div className="content">
-                <h3>Responsibility</h3>
+                <h1>Responsibility</h1>
                 <p>
                   {/* 제가 맡은 부분을 완성시킬 수 있도록 최선을 다합니다. */}
                 </p>
@@ -109,7 +109,7 @@ const Main: React.FC = () => {
             <article>
               <span className="icon solid fa-arrow-up"></span>
               <div className="content">
-                <h3>Continuous Development</h3>
+                <h1>Continuous Development</h1>
                 <p>
                   {/* 업무시간 외에 스스로의 자기개발을 놓치지 않으려 노력합니다. */}
                 </p>
@@ -152,17 +152,12 @@ const Main: React.FC = () => {
               {/* </ul> */}
             </article>
             <article>
-              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_react-router.jpg`} alt="" /></a>
-              {/* <h3>React-Router-dom</h3> */}
+              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_typescript.jpg`} alt="" /></a>
+              {/* <h3>Typescript</h3> */}
               <p>
-                {/* Page Design, react-router-dom-v5/v6, useHistory, useLocation, useNavigation */}
-                {/* page에서 UX 흐름을 설계하고, react-router-dom-v5 버전에서 history 형태로 적용할 수 있습니다. 이 블로그는 v6를 사용하고 있습니다. */}
+                {/* React에서 Typescript를 사용할 수 있습니다. any type 사용을 지양하며, */}
+                {/* API통신에서 백엔드 모델링이 적용된 Interface(type)를 설계할 수 있습니다. */}
               </p>
-              {/* <h3>Nulla amet dolore</h3> */}
-              {/* <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> */}
-              {/* <ul className="actions"> */}
-              {/* <li><a className="button">More</a></li> */}
-              {/* </ul> */}
             </article>
             <article>
               <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_git.jpg`} alt="" /></a>
@@ -173,12 +168,7 @@ const Main: React.FC = () => {
               </p>
             </article>
             <article>
-              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_typescript.jpg`} alt="" /></a>
-              {/* <h3>Typescript</h3> */}
-              <p>
-                {/* React에서 Typescript를 사용할 수 있습니다. any type 사용을 지양하며, */}
-                {/* API통신에서 백엔드 모델링이 적용된 Interface(type)를 설계할 수 있습니다. */}
-              </p>
+              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_androidStudio.jpg`} alt="" /></a>
             </article>
             <article>
               <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_java.jpg`} alt="" /></a>
@@ -187,6 +177,24 @@ const Main: React.FC = () => {
                 {/* 코딩테스트 메인 언어입니다. FE 직무를 맡게된 현재에도 사내에서 시행하는 Java시험 덕분에 꾸준히 리마인드되고 있습니다. */}
                 {/* (COS Pro 1급 1000점, 프로그래머스 2~3레벨 수준) */}
               </p>
+            </article>
+            <article>
+              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_dbeaver.jpg`} alt="" /></a>
+            </article>
+            <article>
+              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_braze.jpg`} alt="" /></a>
+            </article>
+            <article>
+              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_slack.jpg`} alt="" /></a>
+            </article>
+            <article>
+              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_figma.jpg`} alt="" /></a>
+            </article>
+            <article>
+              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_mixpanel.jpg`} alt="" /></a>
+            </article>
+            <article>
+              <a className="image"><img src={`${process.env.PUBLIC_URL}/images/techStack_googleOptimize.jpg`} alt="" /></a>
             </article>
           </div>
         </section>
