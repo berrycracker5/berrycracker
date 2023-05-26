@@ -57,12 +57,17 @@ const Main: React.FC = () => {
               <p>PARK JINWAN</p>
             </header>
             <p>
-              안녕하세요 FE 직무를 맡고 있는 개발자 박진완입니다.<br />
+              안녕하세요 성장하는 개발자 박진완입니다<br />
+              기본적인 협업툴을 사용하여 소통하고 있으며,<br />
+              현재는 Hybrid App의 Web 개발과<br />
+              GrowthHacking을 위한 개발을 담당하고 있습니다<br />
+              <br />
               이 블로그는 저의 성장과 함께 기록될 것 입니다!<br />
               방문해주셔서 감사합니다 :)
             </p>
             <p style={{ textAlign: "right" }}>
-              From 2023.04.15
+              created at 2023-04-15<br />
+              updated at 2023-05-26
             </p>
             {/* <ul className="actions">
                 <li><a className="button big">Like</a></li>
