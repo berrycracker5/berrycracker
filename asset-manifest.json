@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/berrycracker/static/css/main.5009dca9.css",
-    "main.js": "/berrycracker/static/js/main.2feeac65.js",
-    "static/media/fa-solid-900.svg": "/berrycracker/static/media/fa-solid-900.45690f4345fd0e303e35.svg",
-    "static/media/fa-brands-400.svg": "/berrycracker/static/media/fa-brands-400.675f6734fc707ee98601.svg",
+    "main.css": "/berrycracker/static/css/main.5f0af395.css",
+    "main.js": "/berrycracker/static/js/main.d044e9b8.js",
+    "static/media/fa-solid-900.svg": "/berrycracker/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
+    "static/media/fa-brands-400.svg": "/berrycracker/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
     "static/media/fa-solid-900.eot": "/berrycracker/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
     "static/media/fa-solid-900.ttf": "/berrycracker/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
-    "static/media/fa-regular-400.svg": "/berrycracker/static/media/fa-regular-400.0772874aec68f8e76656.svg",
+    "static/media/fa-regular-400.svg": "/berrycracker/static/media/fa-regular-400.4689f52cc96215721344.svg",
     "static/media/fa-brands-400.eot": "/berrycracker/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
     "static/media/fa-brands-400.ttf": "/berrycracker/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
     "static/media/fa-solid-900.woff": "/berrycracker/static/media/fa-solid-900.eeccf4f66002c6f2ba24.woff",
@@ -20,7 +20,7 @@
     "index.html": "/berrycracker/index.html"
   },
   "entrypoints": [
-    "static/css/main.5009dca9.css",
-    "static/js/main.2feeac65.js"
+    "static/css/main.5f0af395.css",
+    "static/js/main.d044e9b8.js"
   ]
 }
