@@ -72,53 +72,51 @@ const PostsList: React.FC = () => {
   return (
     <>
       {/* <!-- Main --> */}
-      <div id="main">
-        <div className="inner">
-          {/* <!-- Header --> */}
-          <MainHeader />
+      <div className="inner">
+        {/* <!-- Header --> */}
+        <MainHeader />
 
-          {/* Posts List */}
-          {/* width : 10 / 55 / 25 / 10 */}
-          <Div_postslistWrapper>
-            <Div_postslistsHeader>
-              <Span_postsHeader style={{ width: "10%" }}>
-                번호
-              </Span_postsHeader>
-              <Span_postsHeader style={{ width: "55%" }}>
-                제목
-              </Span_postsHeader>
-              <Span_postsHeader style={{ width: "25%" }}>
-                작성일자
-              </Span_postsHeader>
-              <Span_postsHeader style={{ width: "10%" }}>
-                비고
-              </Span_postsHeader>
-            </Div_postslistsHeader>
+        {/* Posts List */}
+        {/* width : 10 / 55 / 25 / 10 */}
+        <Div_postslistWrapper>
+          <Div_postslistsHeader>
+            <Span_postsHeader style={{ width: "10%" }}>
+              번호
+            </Span_postsHeader>
+            <Span_postsHeader style={{ width: "55%" }}>
+              제목
+            </Span_postsHeader>
+            <Span_postsHeader style={{ width: "25%" }}>
+              작성일자
+            </Span_postsHeader>
+            <Span_postsHeader style={{ width: "10%" }}>
+              비고
+            </Span_postsHeader>
+          </Div_postslistsHeader>
 
-            <Div_postsWrapper>
-              {posts.map((item, index) => {
-                return (
-                  <Button_posts key={index} onClick={() => handleClickPost(item)}>
-                    <Span_posts style={{ width: "10%" }}>
-                      {item.postNo}
-                    </Span_posts>
-                    {/* <Span_posts style={{ width: "55%", textAlign: "left" }}> */}
-                    <Span_posts style={{ width: "55%" }}>
-                      {item.postTitle}
-                    </Span_posts>
-                    <Span_posts style={{ width: "25%" }}>
-                      {moment(item.createDate).format("YYYY.MM.DD")}
-                    </Span_posts>
-                    <Span_posts style={{ width: "10%" }}>
-                      {item.postOthers}
-                    </Span_posts>
-                  </Button_posts>
-                )
-              })}
-            </Div_postsWrapper>
-          </Div_postslistWrapper>
-        </div>
-      </div >
+          <Div_postsWrapper>
+            {posts.map((item, index) => {
+              return (
+                <Button_posts key={index} onClick={() => handleClickPost(item)}>
+                  <Span_posts style={{ width: "10%" }}>
+                    {item.postNo}
+                  </Span_posts>
+                  {/* <Span_posts style={{ width: "55%", textAlign: "left" }}> */}
+                  <Span_posts style={{ width: "55%" }}>
+                    {item.postTitle}
+                  </Span_posts>
+                  <Span_posts style={{ width: "25%" }}>
+                    {moment(item.createDate).format("YYYY.MM.DD")}
+                  </Span_posts>
+                  <Span_posts style={{ width: "10%" }}>
+                    {item.postOthers}
+                  </Span_posts>
+                </Button_posts>
+              )
+            })}
+          </Div_postsWrapper>
+        </Div_postslistWrapper>
+      </div>
     </>
   )
 }

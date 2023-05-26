@@ -1,16 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid  */
 /* eslint-disable jsx-a11y/anchor-has-content  */
+import { RootState } from "../redux";
+import { setShowSidebar } from "../redux/controlSidebar";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
-  const [showSidebar, setShowSidebar] = useState<boolean>(false);
+  const dispatch = useDispatch();
+  const showSidebar = useSelector((state: RootState) => state.controlSidebar.isShow);
   const [showAboutMeSubMenu, setShowAboutMeSubMenu] = useState<boolean>(true);
   const [showPostsSubMenu, setShowPostsSubMenu] = useState<boolean>(true);
 
   const onClickSidebarToggle = () => {
-    setShowSidebar(!showSidebar);
+    dispatch(setShowSidebar(!showSidebar));
   }
 
   const onClickAboutMeSubmenu = () => {
@@ -23,34 +28,34 @@ const Sidebar = () => {
 
   const handleClickIntroduction = () => {
     navigate("/", { state: { prevPage: "sidebar" } });
-    setShowSidebar(false);
+    dispatch(setShowSidebar(false));
   }
 
   const handleClickStrongs = () => {
     navigate("/", { state: { prevPage: "sidebar", scrollTo: "Strongs" } });
-    setShowSidebar(false);
+    dispatch(setShowSidebar(false));
   }
 
   const handleClickTechStacks = () => {
     navigate("/", { state: { prevPage: "sidebar", scrollTo: "TechStacks" } });
-    setShowSidebar(false);
+    dispatch(setShowSidebar(false));
   }
 
   const handleClickProjects = () => {
     navigate("/", { state: { prevPage: "sidebar", scrollTo: "Projects" } });
-    setShowSidebar(false);
+    dispatch(setShowSidebar(false));
   }
 
   const handleClickStyles = () => {
     navigate("/styles");
     scrollToTop();
-    setShowSidebar(false);
+    dispatch(setShowSidebar(false));
   }
 
   const handleClickHtmlCss = () => {
     navigate("/posts");
     scrollToTop();
-    setShowSidebar(false);
+    dispatch(setShowSidebar(false));
   }
 
   const scrollToTop = () => {
@@ -148,7 +153,6 @@ const Sidebar = () => {
           {/* <!-- Footer --> */}
           <footer id="footer">
             <p className="copyright">&copy; <a href="https://berrycracker5.github.io/berrycracker">PARK JINWAN</a> All rights reserved. <br />
-              Demo Images From <a href="https://unsplash.com">UNSPLASH</a>. <br />
               Designed By <a href="https://html5up.net">HTML5 UP</a>.<br />
               <br />
               <br />

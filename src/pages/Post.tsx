@@ -27,23 +27,22 @@ const Post: React.FC = () => {
   return (
     <>
       {/* <!-- Main --> */}
-      <div id="main">
-        <div className="inner">
-          {/* <!-- Header --> */}
-          <MainHeader />
+      <div className="inner">
+        {/* <!-- Header --> */}
+        <MainHeader />
 
-          {/* Post */}
-          <div className="post-wrapper">
-            <h1 className="post-title">
-              {locationState?.post?.postTitle}
-            </h1>
-            <div className="post-content">
+        {/* Post */}
+        <div className="post-wrapper">
+          <h1 className="post-title">
+            {locationState?.post?.postTitle}
+          </h1>
+          <div className="post-content">
+            {/* {locationState?.post?.postContent} */}
+            <ReactMarkDown remarkPlugins={[remarkGfm]}>
+              {/* 아래처럼 쓰면 <pre> 태그가 생겨버려서 안됨 */}
               {/* {locationState?.post?.postContent} */}
-              <ReactMarkDown remarkPlugins={[remarkGfm]}>
-                {/* 아래처럼 쓰면 <pre> 태그가 생겨버려서 안됨 */}
-                {/* {locationState?.post?.postContent} */}
-                {/* {content} */}
-                {`
+              {/* {content} */}
+              {`
 # head
 
 **굵게**
@@ -60,11 +59,10 @@ const Post: React.FC = () => {
 
 > 인용문
                 `}
-              </ReactMarkDown>
-            </div>
+            </ReactMarkDown>
           </div>
         </div>
-      </div >
+      </div>
     </>
   )
 }

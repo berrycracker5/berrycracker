@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import moveScroll from './moveScroll';
+import controlSidebar from './controlSidebar';
 
 const rootReducer = combineReducers({
-  moveScroll
+  moveScroll,
+  controlSidebar,
 });
 
 // 루트 리듀서를 내보내주세요.
