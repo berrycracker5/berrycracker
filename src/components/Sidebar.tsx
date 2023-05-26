@@ -23,7 +23,7 @@ const Sidebar = () => {
   }
 
   const onClickPostsSubmenu = () => {
-    setShowAboutMeSubMenu(!showAboutMeSubMenu);
+    setShowPostsSubMenu(!showPostsSubMenu);
   }
 
   const handleClickIntroduction = () => {
