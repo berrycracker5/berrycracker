@@ -3482,6 +3482,7 @@ button:disabled,
   -ms-flex-shrink: 1;
   flex-shrink: 1;
   width: 50%;
+  padding: 2.5rem;
 }
 
 #banner .image {
