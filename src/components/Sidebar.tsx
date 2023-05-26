@@ -11,7 +11,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const showSidebar = useSelector((state: RootState) => state.controlSidebar.isShow);
-  const [showAboutMeSubMenu, setShowAboutMeSubMenu] = useState<boolean>(true);
+  const [showAboutMeSubMenu, setShowAboutMeSubMenu] = useState<boolean>(false);
   const [showPostsSubMenu, setShowPostsSubMenu] = useState<boolean>(true);
 
   const onClickSidebarToggle = () => {
