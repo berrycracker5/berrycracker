@@ -19,8 +19,8 @@ const MainWrapper: React.FC = () => {
     <div id="main" onClick={handleClickMainWrapper}>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/posts" element={<PostsList />} />
-        <Route path="/posts/post" element={<Post />} />
+        <Route path="/post-list/:postType" element={<PostsList />} />
+        <Route path="/post/:postNo" element={<Post />} />
         <Route path="/styles" element={<Styles />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>

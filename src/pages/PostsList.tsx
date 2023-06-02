@@ -3,10 +3,10 @@
 /* eslint-disable react/jsx-pascal-case  */
 
 import React, { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import MainHeader from "../components/MainHeader";
 import styled from "styled-components";
-import MPost from "@/models/MPost";
+import PostModel from "@/models/PostModel";
 import moment from "moment";
 import { MyPosts } from "../MyPosts";
 
@@ -57,22 +57,25 @@ interface ILocationState {
 
 }
 const PostsList: React.FC = () => {
-  const posts: MPost[] = MyPosts;
+  const posts: PostModel[] = MyPosts;
   const navigate = useNavigate();
   const locationState = useLocation().state as ILocationState;
+  const { postType } = useParams();
+  const displayPosts: PostModel[] = posts.filter(item => item.postType == postType); // 실제 보여줄 post list
 
   useEffect(() => {
 
   })
 
-  const handleClickPost = (item: MPost) => {
-    navigate("/posts/post", { state: { post: item } });
+  const handleClickPost = (item: PostModel) => {
+    navigate(`/post/${item?.postNo}`, { state: { post: item } }); // todo : postNo만 던지자
   }
 
   return (
     <>
       {/* <!-- Main --> */}
       <div className="inner">
+
         {/* <!-- Header --> */}
         <MainHeader />
 
@@ -95,7 +98,7 @@ const PostsList: React.FC = () => {
           </Div_postslistsHeader>
 
           <Div_postsWrapper>
-            {posts.map((item, index) => {
+            {displayPosts.map((item, index) => {
               return (
                 <Button_posts key={index} onClick={() => handleClickPost(item)}>
                   <Span_posts style={{ width: "10%" }}>
