@@ -58,6 +58,12 @@ const Sidebar = () => {
     dispatch(setShowSidebar(false));
   }
 
+  const handleClickWebProgramming = () => {
+    navigate("/webProgramming");
+    scrollToTop();
+    dispatch(setShowSidebar(false));
+  }
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -104,7 +110,7 @@ const Sidebar = () => {
                   <li><a>Others</a></li>
                 </ul>
               </li>
-              {/* <li><a onClick={handleClickStyles}>Styles</a></li> */}
+              <li><a onClick={handleClickWebProgramming}>Web Programming</a></li>
               {/* <li><a>Test Page</a></li> */}
               {/* <li><a href="generic.html">Generic</a></li> */}
               {/* <li><a href="elements.html">Elements</a></li> */}
