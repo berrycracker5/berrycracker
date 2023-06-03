@@ -14,15 +14,15 @@ const Sidebar = () => {
   const [showAboutMeSubMenu, setShowAboutMeSubMenu] = useState<boolean>(false);
   const [showPostsSubMenu, setShowPostsSubMenu] = useState<boolean>(true);
 
-  const onClickSidebarToggle = () => {
+  const handleClickSidebarToggle = () => {
     dispatch(setShowSidebar(!showSidebar));
   }
 
-  const onClickAboutMeSubmenu = () => {
+  const handleClickAboutMeToggle = () => {
     setShowAboutMeSubMenu(!showAboutMeSubMenu);
   }
 
-  const onClickPostsSubmenu = () => {
+  const handleClickPostsToggle = () => {
     setShowPostsSubMenu(!showPostsSubMenu);
   }
 
@@ -46,17 +46,11 @@ const Sidebar = () => {
     dispatch(setShowSidebar(false));
   }
 
-  const handleClickStyles = () => {
-    navigate("/styles");
+  const handleClickPostsSub = (menuName: string) => {
+    navigate(`/post-list/${menuName}`);
     scrollToTop();
     dispatch(setShowSidebar(false));
-  }
-
-  const handleClickHtmlCss = () => {
-    navigate("/posts");
-    scrollToTop();
-    dispatch(setShowSidebar(false));
-  }
+  } 
 
   const handleClickWebProgramming = () => {
     navigate("/webProgramming");
@@ -91,7 +85,7 @@ const Sidebar = () => {
             </header>
             <ul>
               <li>
-                <span className={`opener ${showAboutMeSubMenu ? "active" : ""}`} onClick={onClickAboutMeSubmenu}>ABOUT ME</span>
+                <span className={`opener ${showAboutMeSubMenu ? "active" : ""}`} onClick={handleClickAboutMeToggle}>ABOUT ME</span>
                 <ul>
                   <li><a onClick={handleClickIntroduction}>Introduction</a></li>
                   <li><a onClick={handleClickStrongs}>Strongs</a></li>
@@ -100,14 +94,14 @@ const Sidebar = () => {
                 </ul>
               </li>
               <li>
-                <span className={`opener ${showPostsSubMenu ? "active" : ""}`} onClick={onClickPostsSubmenu}>Posts</span>
+                <span className={`opener ${showPostsSubMenu ? "active" : ""}`} onClick={handleClickPostsToggle}>Posts</span>
                 <ul>
-                  <li><a onClick={handleClickHtmlCss}>HTML & CSS</a></li>
-                  <li><a>Javascript</a></li>
-                  <li><a>React</a></li>
-                  <li><a>React Native</a></li>
-                  <li><a>Git</a></li>
-                  <li><a>Others</a></li>
+                  <li><a onClick={() => handleClickPostsSub("html-css")}>HTML & CSS</a></li>
+                  <li><a onClick={() => handleClickPostsSub("javascript")}>Javascript</a></li>
+                  <li><a onClick={() => handleClickPostsSub("react")}>React</a></li>
+                  <li><a onClick={() => handleClickPostsSub("react-native")}>React Native</a></li>
+                  <li><a onClick={() => handleClickPostsSub("git")}>Git</a></li>
+                  <li><a onClick={() => handleClickPostsSub("others")}>Others</a></li>
                 </ul>
               </li>
               <li><a onClick={handleClickWebProgramming}>Web Programming</a></li>
@@ -171,7 +165,7 @@ const Sidebar = () => {
 
         </div>
 
-        <a className="toggle" onClick={onClickSidebarToggle} />
+        <a className="toggle" onClick={handleClickSidebarToggle} />
       </div>
     </>
   )
