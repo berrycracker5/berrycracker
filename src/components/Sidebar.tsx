@@ -50,7 +50,7 @@ const Sidebar = () => {
     navigate(`/post-list/${menuName}`);
     scrollToTop();
     dispatch(setShowSidebar(false));
-  } 
+  }
 
   const handleClickWebProgramming = () => {
     navigate("/webProgramming");

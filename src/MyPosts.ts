@@ -34,23 +34,40 @@ export const MyPosts: PostModel[] = [
   {
     postNo: "2",
     postType: PostType.OTHERS,
-    postTitle: "두번째 제목입니다",
+    postTitle: "마크다운 문법 연습",
     postContent: `
-# head
+# h1
 
-**굵게**
+## h2
+
+### h3
 
 일반 텍스트
+
+www.naver.com
+
+**진하게**
+
+*기울이기*
 
 \`\`\`
 코드블럭
 \`\`\`
 
-*기울이기*
+> 여기는 인용문이 들어가는 곳입니다.
+>> 두번째
+>>> 3depth도 가능
 
-글자 \'배경색\'
+1. 첫번째
+2. 두번째
+3. 세번째
 
-> 인용문
+일반텍스트
+
+- hypon text
+
+일반 텍스트 (앞에 2칸 띔)
+
 `,
     postOthers: "-",
     createDate: "20230513",
@@ -101,49 +118,49 @@ https://www.notion.so/HTML-CSS-5add4d9de95e49e2926e7f55a32f719d
       - : absolute → 부모 속성중 relative로 지정된 곳을 기준으로 위치를 옮김
 
 ## span(inline), p(block)
- - lorem : 샘플 문자열
- - font-size : 16px
- - font-weight : bold, lighter, 100단위 숫자 (100, 200, …, 900)
- - font-style : italic
- - text-decoration : (dotted, solid, ..) (red, blue, ) underline
+- lorem : 샘플 문자열
+- font-size : 16px
+- font-weight : bold, lighter, 100단위 숫자 (100, 200, …, 900)
+- font-style : italic
+- text-decoration : (dotted, solid, ..) (red, blue, ) underline
 
 ## a(하이퍼링크)
- - href= www.naver.com
- - 밑줄이랑 색깔 없애기 위해, text-decoration : none, color: black 을 보통 지정해줌
- - target : “_blank” → 새 탭에서 열기
- - href 주소에 내가 만든 div id 값을 넣으면(href=”#myDiv”) 해당 클래스로 스크롤이 이동함!
+- href= www.naver.com
+- 밑줄이랑 색깔 없애기 위해, text-decoration : none, color: black 을 보통 지정해줌
+- target : “_blank” → 새 탭에서 열기
+- href 주소에 내가 만든 div id 값을 넣으면(href=”#myDiv”) 해당 클래스로 스크롤이 이동함!
 
 ## hover(마우스 올렸을 때 효과)
- - transition : all 300ms (효과명:linear, ease-in, ease-out, ease-in-out) → transition으로 hover 효과가 좀더 자연스럽게 작동하게 해줌
- - ![스크린샷 2022-12-10 오후 7.31.24.png](HTML%20CSS%205add4d9de95e49e2926e7f55a32f719d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2022-12-10_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7.31.24.png)
+- transition : all 300ms (효과명:linear, ease-in, ease-out, ease-in-out) → transition으로 hover 효과가 좀더 자연스럽게 작동하게 해줌
+- ![스크린샷 2022-12-10 오후 7.31.24.png](HTML%20CSS%205add4d9de95e49e2926e7f55a32f719d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2022-12-10_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7.31.24.png)
 
 ## ul, ol (리스트는 li태그로 만듬)
- - li에서 list-style-type : square → li의 불릿스타일을 네모로 바꿈 (디폴트는 원형)
- - list-style : none → 불릿을 없앰
- - ul내에서 리스트들을 가로로 정렬하고 싶으면 → ul을 flex를 바꿈
+- li에서 list-style-type : square → li의 불릿스타일을 네모로 바꿈 (디폴트는 원형)
+- list-style : none → 불릿을 없앰
+- ul내에서 리스트들을 가로로 정렬하고 싶으면 → ul을 flex를 바꿈
 
 ## 기타 등등
- - padding, margin : top right bottom left
- - text-align : center
- - cursor : pointer → 마우스 올렸을 때 클릭모양으로 변경
- - transform (보통 .myDiv:hover { translate(10px, 10px) } 처럼 hover이벤트로 많이 쓰는 듯)
- - translate(-50%, -50%) → x축 y축으로 해당 요소를 옮겨줌 (양수가 오른쪽, 아래쪽)
- - rotate(720deg) → 음수는 반시계 방향, rotateX(180deg), rotateY → X,Y축을 기준으로 뒤집어줌
- - scale(2.0, 1.5) → 가로로 2배, 세로로 1.5배 확대시킴
- - overflow-y : auto → 스크롤이 필요한 경우는 스크롤이 생김 (벗어난거 안보이게 하려면 hidden)
- - sticky : 스크롤을 해도 그 화면의 그 위치에 포지셔닝 함
- - box-sizing : border-box → 원래 내가 지정한 width,height에 border가 더해지는데, border까지 더해서 width가 되도록 해줌
+- padding, margin : top right bottom left
+- text-align : center
+- cursor : pointer → 마우스 올렸을 때 클릭모양으로 변경
+- transform (보통 .myDiv:hover { translate(10px, 10px) } 처럼 hover이벤트로 많이 쓰는 듯)
+- translate(-50%, -50%) → x축 y축으로 해당 요소를 옮겨줌 (양수가 오른쪽, 아래쪽)
+- rotate(720deg) → 음수는 반시계 방향, rotateX(180deg), rotateY → X,Y축을 기준으로 뒤집어줌
+- scale(2.0, 1.5) → 가로로 2배, 세로로 1.5배 확대시킴
+- overflow-y : auto → 스크롤이 필요한 경우는 스크롤이 생김 (벗어난거 안보이게 하려면 hidden)
+- sticky : 스크롤을 해도 그 화면의 그 위치에 포지셔닝 함
+- box-sizing : border-box → 원래 내가 지정한 width,height에 border가 더해지는데, border까지 더해서 width가 되도록 해줌
 
 ## CSS
- - p:first-child → p태그중 첫번째 요소를 선택
- - p:last-child → p태그중 마지막 요소를 선택
- - p:nth-child(1) → 1번째 요소를 선택 (0이 1번째가 아님!)
- - p:nth-child(3n) → 3, 6, 9, … 요소를 선택
- - 가상요소
- - div::after → HTML이 끝날 때 추가되는 가상요소
- - div::before → HTML안 앞쪽에 추가되는 가상요소
- - 보통 밑줄같은거 만들 때 많이 쓰이는 듯 (.text:hover .span::after {content:’’, display:””, width:””})
- - 접두어  —webkit-…. : 크롬, 사파리에서 적용되도록 지정해주는것 (사이트별로 지정해주는 것, 보통 webkit만)
+- p:first-child → p태그중 첫번째 요소를 선택
+- p:last-child → p태그중 마지막 요소를 선택
+- p:nth-child(1) → 1번째 요소를 선택 (0이 1번째가 아님!)
+- p:nth-child(3n) → 3, 6, 9, … 요소를 선택
+- 가상요소
+- div::after → HTML이 끝날 때 추가되는 가상요소
+- div::before → HTML안 앞쪽에 추가되는 가상요소
+- 보통 밑줄같은거 만들 때 많이 쓰이는 듯 (.text:hover .span::after {content:’’, display:””, width:””})
+- 접두어  —webkit-…. : 크롬, 사파리에서 적용되도록 지정해주는것 (사이트별로 지정해주는 것, 보통 webkit만)
     `,
     postOthers: "",
     createDate: "20230512",
