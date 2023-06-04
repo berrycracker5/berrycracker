@@ -3123,7 +3123,7 @@ button:disabled,
 
 @media screen and (max-width: 736px) {
   #main>.inner {
-    padding: 0 1em 0.1em 1em;
+    padding: 0 2em 0.1em 2em;
   }
 
   #main>.inner>section {
