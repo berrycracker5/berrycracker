@@ -1,6 +1,67 @@
 import PostModel, { PostType } from "./models/PostModel";
-
 export const MyPosts: PostModel[] = [
+  {
+    postNo: "7",
+    postType: PostType.REACTNATIVE,
+    postTitle: "기본 개념",
+    createDate: "2023-06-04",
+    postContent:`
+
+`
+  },
+  {
+    postNo: "6",
+    postType: PostType.JAVASCRIPT,
+    postTitle: "ES6 문법",
+    postContent: `
+\`\`\`
+const name = "JW";
+const age = 28;
+const gender = "M";
+const obj = { first: '1', second: '2', third: '3' };
+const arr = [1, 2, 3, 4, 5];
+\`\`\`
+
+#### Shorthand Property names
+- 객체를 새로 만들 때, Property와 변수명이 같은 경우 사용
+\`\`\`
+👍const newObj = { name , gender } ;
+💩obj.name = “JW”,  obj.gender = “M”
+\`\`\`
+
+#### Destructing Assignment (구조분해할당)
+- 변수를 새로 만들 때, 객체/배열의 값을 빠르게 할당하는 경우 사용
+\`\`\`
+👍const { first, second } = obj;  
+💩const first = obj.first,  const second = obj.second;
+👍const { first: myVar1, third: myVar2 } = obj; 
+💩const myVar1 = obj.first,  const myVar2 = obj.third;
+👍const [ one, two ] = arr; 
+💩const one = arr[0],  const two = arr[1];
+👍const [one, two, , four ] = arr;  
+💩const four = arr[3];
+\`\`\`
+
+#### Spread Syntax (얕은 복사)
+- 객체/배열을 복사할 때 사용 (주소 참조)
+\`\`\`
+👍const copyArr = […arr, 6, 7];
+💩const copyArr = [1,2,3,4,5, 6, 7];
+👍const totalArr = […arr, …copyArr, 8, 9];  //이런식으로 병합도 가능
+👍const copyObj = {…obj, height: 170};  // 객체를 병합할 때 같은 키를 가진 값이 있다면, 뒤에 값으로 덮어씌여짐
+\`\`\`
+
+#### Nullish Coalescing Operator
+- ?? 연산자는 undefined와 null만 체크하도록 할 수 있음
+- Falsy로 체크하려면 || 연산자를 사용해야됨
+> Falsy : undefined, null, false, "", 0, NaN
+\`\`\`
+👍const name = oldName ?? “No Name”;
+💩const name = oldName || “No Name”;
+\`\`\`
+`,
+    createDate: "20230604",
+  },
   {
     postNo: "5",
     postType: PostType.OTHERS,
@@ -22,14 +83,6 @@ export const MyPosts: PostModel[] = [
     postContent: "후우...",
     postOthers: "",
     createDate: "20230526",
-  },
-  {
-    postNo: "3",
-    postType: PostType.JAVASCRIPT,
-    postTitle: "세번째 제목입니다",
-    postContent: "내용 3",
-    postOthers: "",
-    createDate: "20230514",
   },
   {
     postNo: "2",
@@ -127,8 +180,8 @@ https://www.notion.so/HTML-CSS-5add4d9de95e49e2926e7f55a32f719d
 ## a(하이퍼링크)
 - href= www.naver.com
 - 밑줄이랑 색깔 없애기 위해, text-decoration : none, color: black 을 보통 지정해줌
-- target : “_blank” → 새 탭에서 열기
-- href 주소에 내가 만든 div id 값을 넣으면(href=”#myDiv”) 해당 클래스로 스크롤이 이동함!
+- target : "_blank" → 새 탭에서 열기
+- href 주소에 내가 만든 div id 값을 넣으면(href="#myDiv") 해당 클래스로 스크롤이 이동함!
 
 ## hover(마우스 올렸을 때 효과)
 - transition : all 300ms (효과명:linear, ease-in, ease-out, ease-in-out) → transition으로 hover 효과가 좀더 자연스럽게 작동하게 해줌
@@ -159,7 +212,7 @@ https://www.notion.so/HTML-CSS-5add4d9de95e49e2926e7f55a32f719d
 - 가상요소
 - div::after → HTML이 끝날 때 추가되는 가상요소
 - div::before → HTML안 앞쪽에 추가되는 가상요소
-- 보통 밑줄같은거 만들 때 많이 쓰이는 듯 (.text:hover .span::after {content:’’, display:””, width:””})
+- 보통 밑줄같은거 만들 때 많이 쓰이는 듯 (.text:hover .span::after {content:’’, display:", width:"})
 - 접두어  —webkit-…. : 크롬, 사파리에서 적용되도록 지정해주는것 (사이트별로 지정해주는 것, 보통 webkit만)
     `,
     postOthers: "",
