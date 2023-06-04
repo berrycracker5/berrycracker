@@ -1,6 +1,98 @@
 import PostModel, { PostType } from "./models/PostModel";
 export const MyPosts: PostModel[] = [
   {
+    postNo: "9",
+    postType: PostType.REACT,
+    postTitle: "React 기본 개념",
+    createDate: "2023-06-04",
+    postContent:`
+#### Intro
+- 컴포넌트는 대문자로 시작
+- index.html, index.js는 이름이 변경되면 안된다
+---
+#### 불변성
+- 원시타입(primitive type) : boolean, number, string, null, undefined, symbol
+
+원시타입은 메모리 영역 안에서 변경이 불가 -> 새로운 메모리에 새로운 값 할당시킴
+
+- 참조타입(reference type) : 원시타입을 제외한 모든 것 (배열, 함수 등)
+
+메모리 주소값을 저장
+
+불변성을 유지할 수 없으므로, 새로운 배열을 반환하는 메소드 사용 필요함 (...연산자, map, filter, slice, reduce)
+> splice, push 는 원본 데이터를 변경함
+---
+#### React Router
+- 기존 웹페이지 : 새로운 페이지를 로드
+- SPA에서 라우팅 : 서버에서 가져온 하나의 index.html에서 내가 원하는 페이지로 가는 것 (=내가 원하는 데이터만 부르는 것)
+
+라우터 종류는 크게 두가지
+
+BrowserRouter : HTML5를 지원하는 브라우저의 주소를 감지
+
+HashRouter : 해시 주소(http://tistory.com/#test)를 감지
+
+---
+#### 사용 순서
+
+**1. <BrowserRouter>태그로 컴포넌트 사용하기**
+- BrowserRouter를 사용 할 것이기 떄문에, <BrowserRouter>태그로 컴포넌트를 감싸주자. - Header는 모든 URL에 공통 적용할 Component로 최상단에 위치 할 예정이다.
+
+**2. <Routes>, <Route> 컴포넌트 사용하기** 
+- <Routes>컴포넌트는 여러 Route를 감싸서 그 중 규칙이 일치하는 라우트 단 하나만을 렌더링 시켜주는 역할을 한다. 
+- <Route>는 path속성에 경로, element속성에는 컴포넌트를 넣어 준다. 여러 라우팅을 매칭하고 싶은 경우 URL 뒤에 *을 사용하면 된다.
+
+2.1) "/"로 접근시 메인페이지(Main.js)를 보여줄 것이다. 
+
+2.2) "/product/상품번호"로 접근시 상품상세페이지(Product.js)를 보여 줄 것이다.
+
+**3. <Link> 컴포넌트 사용하기**
+- 웹 페이지에서는 원래 링크를 보여줄 때 a태그를 사용한다. 하지만 a태그는 클릭시 페이지를 새로 불러오기때문에 사용하지 않는다. 
+- Link 컴포넌트를 사용하는데, 생김새는 a태그를 사용하지만, History API를 통해 브라우저 주소의 경로만 바꾸는 기능이 내장되어 있다. - 문법 : <Link to="경로">링크명</Link> - import { Link } from 'react-router-dom';
+
+**4. 사전에 정의하지 않은 경로로 접근하는 경우 NotFound 페이지로 이동 처리**
+
+useHistroy 사용
+
+- const history = useHistory();로 선언 후
+    - history.push({ pathname: ”/main”, state : { myKey: “test” } }) : stack으로 쌓인다 + state전달
+    - history.go(-2)
+    - history.goBack(); : ==history.go(-1)
+    - history.replace({ pathname: ”/main”, state : { myKey: “test” } }) : 현재 URL을 변경한다
+
+useParams 사용 (쿼리스트링)
+
+- <Route path="/product/:productId" element={<Product />}></Route>
+- 위처럼 App.ts에 선언되어있을 때, <Product> 컴포넌트 안쪽에서
+- **const** { productId } = useParams(); 로 불러오면, productId 값을 가져올 수 있음
+
+useLocation 사용
+
+\`\`\`
+{
+  key: 'ac3df4', // not with HashHistory!
+  pathname: '/somewhere',
+  search: '?some=search-string',
+  hash: '#howdy',
+  state: {
+    [userDefined]: true
+  }
+}
+\`\`\`
+- key : location 객체의 고유 값, 초기값은 default, 페이지가 변경될 때 마다 고유의 값이 생성된다.
+- pathname : 현재 주소 경로
+- search : ?를 포함한 쿼리스트링
+- hash : 주소의 #문자열 뒤의 값
+- state : 페이지로 이동시 임의로 넣을 수 있는 상태 값
+
+useNavigate(v6)
+
+- Link 컴포넌트를 사용하지 않고 다른 페이지로 이동을 해야 하는 경우, 뒤로가기 등에 사용하는 Hook 이다.
+- replace 옵션을 사용하면 페이지를 이동할 때 히스토리를 남기지 않는다.
+- const navigate = useNavigate()로 선언 한 뒤, navigate(-1), navigate('/', {replace: true}) 와 같이 사용할 수 있음
+`
+  },
+  {
     postNo: "8",
     postType: PostType.GIT,
     postTitle: "기본 사용법 정리",
