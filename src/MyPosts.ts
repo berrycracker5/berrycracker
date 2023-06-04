@@ -6,7 +6,8 @@ export const MyPosts: PostModel[] = [
     postTitle: "기본 개념",
     createDate: "2023-06-04",
     postContent:`
-
+#### 기본 동작 원리
+![ReactNavie 기본동작 이미지](https://github.com/berrycracker5/berrycracker/blob/main/public/images/post/react-native-1.png?raw=true)
 `
   },
   {
