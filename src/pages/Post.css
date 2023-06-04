@@ -1,7 +1,17 @@
 .post-wrapper {
   padding: 3rem 0rem 1rem 0rem;
 }
-
 .post-title {
   margin-bottom: 3rem;
+  font-family: 'Font Awesome 5 Free';
+}
+.post-content {
+  font-family: 'Font Awesome 5 Free';
+  color: dimgrey;
+}
+.post-content blockquote {
+  color: darkgray
+}
+.post-content code,h1,h2,h3,h4,h5,h6 {
+  font-family: 'Font Awesome 5 Free';
 }
