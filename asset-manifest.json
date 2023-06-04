@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/berrycracker/static/css/main.d3c3ee8d.css",
-    "main.js": "/berrycracker/static/js/main.2e02308e.js",
+    "main.js": "/berrycracker/static/js/main.2e068acb.js",
     "static/media/fa-solid-900.svg": "/berrycracker/static/media/fa-solid-900.45690f4345fd0e303e35.svg",
     "static/media/fa-brands-400.svg": "/berrycracker/static/media/fa-brands-400.675f6734fc707ee98601.svg",
     "static/media/fa-solid-900.eot": "/berrycracker/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
@@ -21,6 +21,6 @@
   },
   "entrypoints": [
     "static/css/main.d3c3ee8d.css",
-    "static/js/main.2e02308e.js"
+    "static/js/main.2e068acb.js"
   ]
 }
