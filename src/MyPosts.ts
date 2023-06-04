@@ -1,28 +1,11 @@
 import PostModel, { PostType } from "./models/PostModel";
 export const MyPosts: PostModel[] = [
   {
-    postNo: "9",
+    postNo: "10",
     postType: PostType.REACT,
-    postTitle: "React 기본 개념",
+    postTitle: "React Router",
     createDate: "2023-06-04",
     postContent:`
-#### Intro
-- 컴포넌트는 대문자로 시작
-- index.html, index.js는 이름이 변경되면 안된다
----
-#### 불변성
-- 원시타입(primitive type) : boolean, number, string, null, undefined, symbol
-
-원시타입은 메모리 영역 안에서 변경이 불가 -> 새로운 메모리에 새로운 값 할당시킴
-
-- 참조타입(reference type) : 원시타입을 제외한 모든 것 (배열, 함수 등)
-
-메모리 주소값을 저장
-
-불변성을 유지할 수 없으므로, 새로운 배열을 반환하는 메소드 사용 필요함 (...연산자, map, filter, slice, reduce)
-> splice, push 는 원본 데이터를 변경함
----
-#### React Router
 - 기존 웹페이지 : 새로운 페이지를 로드
 - SPA에서 라우팅 : 서버에서 가져온 하나의 index.html에서 내가 원하는 페이지로 가는 것 (=내가 원하는 데이터만 부르는 것)
 
@@ -90,6 +73,30 @@ useNavigate(v6)
 - Link 컴포넌트를 사용하지 않고 다른 페이지로 이동을 해야 하는 경우, 뒤로가기 등에 사용하는 Hook 이다.
 - replace 옵션을 사용하면 페이지를 이동할 때 히스토리를 남기지 않는다.
 - const navigate = useNavigate()로 선언 한 뒤, navigate(-1), navigate('/', {replace: true}) 와 같이 사용할 수 있음
+
+`
+  },
+  {
+    postNo: "9",
+    postType: PostType.REACT,
+    postTitle: "React 기본 개념",
+    createDate: "2023-06-04",
+    postContent:`
+#### Intro
+- 컴포넌트는 대문자로 시작
+- index.html, index.js는 이름이 변경되면 안된다
+---
+#### 불변성
+- 원시타입(primitive type) : boolean, number, string, null, undefined, symbol
+
+원시타입은 메모리 영역 안에서 변경이 불가 -> 새로운 메모리에 새로운 값 할당시킴
+
+- 참조타입(reference type) : 원시타입을 제외한 모든 것 (배열, 함수 등)
+
+메모리 주소값을 저장
+
+불변성을 유지할 수 없으므로, 새로운 배열을 반환하는 메소드 사용 필요함 (...연산자, map, filter, slice, reduce)
+> splice, push 는 원본 데이터를 변경함
 `
   },
   {
@@ -362,7 +369,6 @@ flex : 2 라고  쓸 수도 있음. (flex :  basis기본값인 0, shink기본값
 ---
 ## hover(마우스 올렸을 때 효과)
 - transition : all 300ms (효과명:linear, ease-in, ease-out, ease-in-out) → transition으로 hover 효과가 좀더 자연스럽게 작동하게 해줌
-- ![스크린샷 2022-12-10 오후 7.31.24.png](HTML%20CSS%205add4d9de95e49e2926e7f55a32f719d/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2022-12-10_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_7.31.24.png)
 ---
 ## ul, ol (리스트는 li태그로 만듬)
 - li에서 list-style-type : square → li의 불릿스타일을 네모로 바꿈 (디폴트는 원형)
