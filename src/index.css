@@ -332,12 +332,6 @@ h6 {
   font-size: 0.7em;
 }
 
-@media screen and (max-width: 1680px) {
-  h1 {
-    /* font-size: 3.5em; */
-  }
-}
-
 @media screen and (max-width: 980px) {
   h1 {
     font-size: 2.5em;
@@ -370,7 +364,7 @@ sup {
 blockquote {
   border-left: solid 3px rgba(210, 215, 217, 0.75);
   font-style: italic;
-  margin: 0 0 2em 0;
+  margin: 0 0 0.5em 0;
   padding: 0.5em 0 0.5em 2em;
 }
 
@@ -2241,7 +2235,7 @@ ol li {
 
 ul {
   list-style: disc;
-  margin: 0 0 2em 0;
+  margin: 0 0 0.5em 0;
   padding-left: 1em;
 }
 
@@ -3482,7 +3476,7 @@ button:disabled,
   -ms-flex-shrink: 1;
   flex-shrink: 1;
   width: 50%;
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 
 #banner .image {
