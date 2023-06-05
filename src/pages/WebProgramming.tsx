@@ -15,8 +15,11 @@ const WebProgramming: React.FC = () => {
 
   const handleClickCallAPI = () => {
     axios.get(`http://localhost:8080`)
-      .then((response) => {
+      .then(response => {
         console.log(`Called API!!`, response);
+      })
+      .catch(reason => {
+        console.log(`Failed to Call API!! reason: `, reason);
       })
   }
 
